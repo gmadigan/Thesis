@@ -1,0 +1,80 @@
+% Document Class
+% \documentclass[hidelinks,titlepage]{article}
+\documentclass[thesis]{neu}
+
+%%-- For subsubsub sections 
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{authblk} % For affiliations
+\usepackage{graphicx} % For including graphics 
+%\graphicspath{{./}} % optional
+\usepackage{amsmath} % This makes \mathcal{\hat{A}} format properly. Let's you write piece-wise functions 
+\usepackage{float} % In order to use [H] option
+\usepackage{booktabs} % For nice table lines
+\usepackage{hyperref} % To link references 
+\usepackage[all]{hypcap}  % Link to top of figures
+\usepackage{xcolor} % For hyperref colors 
+\usepackage{fancyvrb}
+% hidelinks: no links. Use for final version?
+\hypersetup{
+    colorlinks=false,
+    %hidelinks=true, 
+    linkcolor=darkred,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=cyan,
+    citebordercolor=cyan,
+    filebordercolor=cyan,
+    linkbordercolor=cyan,
+}
+\usepackage{subfig}
+\usepackage{url} % For easy url reading 
+\usepackage{cancel} % For goes to zero 
+\usepackage{tcolorbox} % for hbox
+\usepackage{parskip}
+% \usepackage{amsmath}
+% \usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{rotating}
+%\usepackage{titlesec} % for title spacing
+%\titlespacing{\section}
+  %{0pt}{0.25\baselineskip}{0.25\baselineskip}
+%\titlespacing{\subsection}
+  %{0pt}{2\baselineskip}{3\baselineskip}
+\setlength{\parindent}{0pt} % no indent 
+\setlength{\parskip}{\baselineskip} % space between paragraphs 
+%\usepackage{listings} % for bash style text for displaying commands 
+%\setlength{\fboxsep}{0pt}%
+%\setlength{\fboxrule}{0.35pt}%
+\tcbuselibrary{listings,skins}
+
+%%-- For table of contents spacing 
+\usepackage{setspace}
+
+\lstdefinestyle{mystyle}{
+%numbers=left, 
+%numberstyle=\small, 
+%numbersep=8pt, 
+language=Bash,
+breaklines=true
+%breakatwhitespace=true,
+%linewidth=12cm
+}
+
+\newtcblisting{mylisting}[2][]{
+    arc=0pt, outer arc=0pt,
+    listing only, 
+    listing style=mystyle,
+    title=#2,
+    #1
+    }
+
+\renewcommand\Affilfont{\itshape\small}
