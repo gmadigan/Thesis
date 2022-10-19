@@ -1,0 +1,137 @@
+%% Gabriel Madigan's PhD Thesis 
+%% 19 October 2022
+
+\documentclass[thesis]{neu}
+\input{packages}
+% If you are using the alpha bibliography style, keep these next three lines in your preamble, so that the references are left-aligned; or, you can comment it out and see what happens
+\makeatletter
+\renewcommand{\@biblabel}[1]{[#1]\hfill}
+\makeatother
+
+\title{
+A search for leptoquarks decaying to muons and bottom quarks in proton-proton collisions at $\sqrt{s}=13$ TeV with the full Run II data recorded by CMS 
+}
+ % \\ \newline 
+% Author name
+\author{Gabriel Madigan}
+
+% Department
+\department{Department of Physics} 
+
+% Default style for front pages
+\frontpagestyle{1} % 7 is preferred by Rackham, but should be set individually for each front page
+
+% Acknowledgments (the input [7] determines the style -- 7 is Rackham's preferred style)
+\acknowledgments{ 
+    %\input{Sections/acknowledgements}
+}
+
+\abstract{
+    %\input{Sections/abstract}
+}
+
+\hidepreface
+
+% Committee
+\committee{ %
+Professor Emanuela Barberis, Chair \\
+Professor James Halverson \\
+Professor Toyoko Orimoto \\
+Professor Darien Wood
+}
+
+% Chair must be entered separately for formatting reasons.
+\chair{Professor Emanuela Barberis}
+
+%%-- Begin Document
+\begin{document}
+% \maketitle
+% \doublespacing
+% \tableofcontents
+% \singlespacing % if you want single spacing after showing the table of contents
+\newpage 
+
+\input{common-definitions} 
+
+% Define variables for only rendering certain portions of the document, in order to save time when editing a section.
+\newcounter{RenderPreAnalysisSections}
+\setcounter{RenderPreAnalysisSections}{1}
+
+\newcounter{RenderAnalysisSection}
+\setcounter{RenderAnalysisSection}{1}
+
+\newcounter{RenderAppendices}
+\setcounter{RenderAppendices}{1}
+
+% Build the desired chapters 
+
+\ifthenelse{\value{RenderPreAnalysisSections}=1}
+{
+
+    %\chapter{Introduction} \label{ch:introduction}
+    %\input{Sections/Introduction/Introduction}
+    
+    %\chapter{Theoretical background} \label{chapter:TheoreticalBackground}
+    %\input{Sections/Theory/Theory}
+    
+    %\chapter{Experimental Setup: The LHC and the CMS Detector} \label{chapter:Experimental_Setup}
+    %\input{Sections/LHC_And_CMS/LHC_And_CMS_main}
+    
+    %%-- The Electromagnetic Calorimeter 
+    % \input{Sections/ECAL/ECAL_main}
+
+}
+{
+
+}
+
+\ifthenelse{\value{RenderAnalysisSection}=1}
+{
+    %%-- HH->WWgg 
+    %\chapter{Past: Search for Higgs boson pair production in the WW\texorpdfstring{$\gamma\gamma$}{yy} final state with the Run 2 dataset} \label{chapter:HHWWyy}
+    %\input{Sections/HHWWgg/HHWWgg_main}
+} 
+{
+    % if boolean = 0, do nothing.
+}    
+
+%\chapter{Present: ECAL trigger optimization and commissioning for Run 3}\label{chapter:ECAL_Run3}
+%\input{Sections/ECAL/ECAL_Run3}
+
+%\chapter{Future: Prospects for HH measurements in the WW\texorpdfstring{$\gamma\gamma$}{yy} and \texorpdfstring{$\tau\tau\gamma\gamma$}{tautauyy} final states at the High Luminosity LHC} \label{chapter:Phase_II_HH}
+%\input{Sections/Phase_II_HH/Phase_II_HH_main}
+
+%\chapter{Conclusions and outlook} \label{chapter:summary}
+%\input{Sections/ConclusionsAndOutlook/ConclusionsAndOutlook}
+
+%%-- Bibliography 
+%\bibliographystyle{unsrt}
+%\bibliography{Sections/Bibliography/Bib}
+    
+% \usepackage[sorting=none]{biblatex}    
+    
+\ifthenelse{\value{RenderAppendices}=1}
+{
+    \clearpage
+    \appendix
+    
+    %\input{Sections/Appendices/DNN-Description.tex}
+    %\clearpage
+    %\input{Sections/Appendices/DNN_LO_NLO_Reweight_Distributions.tex}
+    %\clearpage
+    % \input{Sections/Appendices/DNN-Input-Variables.tex}
+    % \clearpage
+    % \input{Sections/Appendices/Appendix_FH_EFT_Benchmark}
+    % \clearpage
+    %\input{Sections/Appendices/Impacts.tex}
+    %\clearpage
+    %\input{Sections/Appendices/SL_DNN_DataSideband_and_MC_SignalRegion_Check.tex}
+    %\clearpage
+   % \input{Sections/Appendices/DNN_andSignal_Validation.tex}
+    
+} 
+{
+    % if boolean = 0, do nothing.
+}      
+
+\end{document}
