@@ -320,7 +320,7 @@
    % Insert the author
    \insertauthor \\ [2ex]%
    
-  B.S. in Physics, Stony Brook University \\ 
+  B.S. in Physics, University of Massachusetts Amherst\\ 
   M.S. in Physics, Northeastern University\\[8ex]
    % More rubber space
    %\vfill %
@@ -338,7 +338,7 @@ Northeastern University \\
    %(\insertdepartment) \\ %
    %in Northeastern University\\ %
    % Year of completion
-  July 27, 2022 \\ [10ex]
+  Oct 19, 2022 \\ [10ex]
    %\number\year %
    %\vfill
    Dissertation Committee \\[2ex]
