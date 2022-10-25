@@ -338,7 +338,7 @@ Northeastern University \\
    %(\insertdepartment) \\ %
    %in Northeastern University\\ %
    % Year of completion
-  Oct 25, 2022 \\ [10ex]
+   Oct 19, 2022 \\ [10ex]
    %\number\year %
    %\vfill
    Dissertation Committee \\[2ex]
