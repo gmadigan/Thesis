@@ -23,11 +23,11 @@ A search for leptoquarks decaying to muons and bottom quarks in proton-proton co
 
 % Acknowledgments (the input [7] determines the style -- 7 is Rackham's preferred style)
 \acknowledgments{ 
-    %\input{Sections/acknowledgements}
+    \input{Text/Acknowledgments/Acknowledgments}
 }
 
 \abstract{
-    %\input{Sections/abstract}
+    \input{Text/Abstract/Abstract}
 }
 
 \hidepreface
@@ -53,85 +53,62 @@ Professor Darien Wood
 
 \input{common-definitions} 
 
-% Define variables for only rendering certain portions of the document, in order to save time when editing a section.
-\newcounter{RenderPreAnalysisSections}
-\setcounter{RenderPreAnalysisSections}{1}
-
-\newcounter{RenderAnalysisSection}
-\setcounter{RenderAnalysisSection}{1}
-
-\newcounter{RenderAppendices}
-\setcounter{RenderAppendices}{1}
-
 % Build the desired chapters 
 
-\ifthenelse{\value{RenderPreAnalysisSections}=1}
-{
+\chapter{Introduction} \label{chapter:Introduction}
+\input{Text/Chapters/Introduction/Introduction}
 
-    %\chapter{Introduction} \label{ch:introduction}
-    %\input{Sections/Introduction/Introduction}
-    
-    %\chapter{Theoretical background} \label{chapter:TheoreticalBackground}
-    %\input{Sections/Theory/Theory}
-    
-    %\chapter{Experimental Setup: The LHC and the CMS Detector} \label{chapter:Experimental_Setup}
-    %\input{Sections/LHC_And_CMS/LHC_And_CMS_main}
-    
-    %%-- The Electromagnetic Calorimeter 
-    % \input{Sections/ECAL/ECAL_main}
+\chapter{Theoretical background} \label{chapter:Theory}
+\input{Text/Chapters/Theory/Theory_main}
 
-}
-{
+\chapter{Experimental Setup: The LHC and the CMS Detector} \label{chapter:Experiment}
+\input{Text/Chapters/Experiment/Experiment_main}
 
-}
+\chapter{Phase II upgrades} \label{chapter:Phase2Upgrades}
+\input{Text/Chapters/Phase2Upgrades/Phase2Upgrades_main}
 
-\ifthenelse{\value{RenderAnalysisSection}=1}
-{
-    %%-- HH->WWgg 
-    %\chapter{Past: Search for Higgs boson pair production in the WW\texorpdfstring{$\gamma\gamma$}{yy} final state with the Run 2 dataset} \label{chapter:HHWWyy}
-    %\input{Sections/HHWWgg/HHWWgg_main}
-} 
-{
-    % if boolean = 0, do nothing.
-}    
+\chapter{Detector Performance} \label{chapter:DetectorPerformance}
+\input{Text/Chapters/DetectorPerformance/DetectorPerformance_main}
 
-%\chapter{Present: ECAL trigger optimization and commissioning for Run 3}\label{chapter:ECAL_Run3}
-%\input{Sections/ECAL/ECAL_Run3}
+\chapter{Search for pair-produced leptoquarks decaying to bottom quarks and muons} \label{chapter:LeptoquarkSearch}
+\input{Text/Chapters/Analysis/Analysis_main}   
 
-%\chapter{Future: Prospects for HH measurements in the WW\texorpdfstring{$\gamma\gamma$}{yy} and \texorpdfstring{$\tau\tau\gamma\gamma$}{tautauyy} final states at the High Luminosity LHC} \label{chapter:Phase_II_HH}
-%\input{Sections/Phase_II_HH/Phase_II_HH_main}
+\chapter{Future leptoquark searches} \label{chapter:FutureLQSearches}
+\input{Text/Chapters/FutureLQSearches/FutureLQSearches}
 
-%\chapter{Conclusions and outlook} \label{chapter:summary}
-%\input{Sections/ConclusionsAndOutlook/ConclusionsAndOutlook}
+\chapter{Conclusion} \label{chapter:Conclusion}
+\input{Text/Chapters/Conclusion/Conclusion}
 
 %%-- Bibliography 
-%\bibliographystyle{unsrt}
-%\bibliography{Sections/Bibliography/Bib}
+\bibliographystyle{unsrt}
+\bibliography{Tex/References/References}
+%\usepackage[sorting=none]{biblatex}    
     
-% \usepackage[sorting=none]{biblatex}    
+\clearpage
+\appendix
+\chapter{3D optimization} \label{app:3DOptimization}
+\input{Text/Appendices/3dOptimization}
+
+\clearpage
+\chapter{BDT performance} \label{app:BDTPerformance}
+\input{Text/Appendices/BDTPerformance}
+
+\clearpage
+\chapter{GE estimation of MES uncertainty} \label{app:GEScaleSyst}
+\input{Text/Appendices/GEScaleSyst}
+
+\clearpage
+\chapter{HEM 15/16 failure study} \label{qpp:HEMFailure}
+\input{Text/Appendices/HEMFailure}
+
+\clearpage
+\chapter{Background normalization scale factors} \label{app:SFStudy}
+\input{Text/Appendices/SFStudy}
+
+\clearpage
+\chapter{Simulated LQ samples} \label{app:SimLQSamples}
+\input{Text/Appendices/SimLQSamples}
     
-\ifthenelse{\value{RenderAppendices}=1}
-{
-    \clearpage
-    \appendix
     
-    %\input{Sections/Appendices/DNN-Description.tex}
-    %\clearpage
-    %\input{Sections/Appendices/DNN_LO_NLO_Reweight_Distributions.tex}
-    %\clearpage
-    % \input{Sections/Appendices/DNN-Input-Variables.tex}
-    % \clearpage
-    % \input{Sections/Appendices/Appendix_FH_EFT_Benchmark}
-    % \clearpage
-    %\input{Sections/Appendices/Impacts.tex}
-    %\clearpage
-    %\input{Sections/Appendices/SL_DNN_DataSideband_and_MC_SignalRegion_Check.tex}
-    %\clearpage
-   % \input{Sections/Appendices/DNN_andSignal_Validation.tex}
-    
-} 
-{
-    % if boolean = 0, do nothing.
-}      
 
 \end{document}
