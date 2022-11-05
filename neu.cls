@@ -686,7 +686,7 @@ Northeastern University \\
 \newcommand{\@acknowledgments}{}
 
 % % Command to set it.
-\renewcommand{\acknowledgments}[1]{
+\newcommand{\acknowledgments}[1]{
  % Show the abstract page.
  \showacknowledgments %
  % Set the abstract text.
