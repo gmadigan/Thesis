@@ -156,7 +156,7 @@
 
 
 % Compress multiple citations
-\RequirePackage{natbib}
+%\RequirePackage{natbib}
 
 % This package allows the ability to create a 'code' environment.
 \RequirePackage{verbatim}
