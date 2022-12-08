@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{feynmp}
+\begin{document}
+\Large
+\begin{fmffile}{feyngraph}
+\begin{fmfgraph*}(250,150)
+\fmfleft{g1,g2}
+\fmfright{mu2,b2,mu1,b1}
+\fmf{gluon}{g1,v1}
+\fmf{gluon}{g2,v1}
+\fmf{dashes,label=LQ,l.s=left}{v1,v2}
+\fmf{dashes,label=$\overline{\mathrm{LQ}}$}{v1,v3}
+\fmf{fermion}{v2,b1}
+\fmf{fermion}{v2,mu1}
+\fmf{fermion}{mu2,v3}
+\fmf{fermion}{b2,v3}
+
+\fmflabel{$\mu^-$}{mu1}
+\fmflabel{$b$}{b1}
+\fmflabel{$\bar b$}{b2}
+\fmflabel{$\mu^+$}{mu2}
+\fmflabel{$g$}{g1}
+\fmflabel{$g$}{g2}
+
+\end{fmfgraph*}
+\end{fmffile}
+\end{document}

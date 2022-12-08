@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{feynmp}
+\begin{document}
+\Large
+\begin{fmffile}{feyngraph}
+\begin{fmfgraph*}(175,175)
+\fmfstraight
+\fmfleft{lmu}
+\fmfright{rmu}
+\fmftop{gamma}
+\fmf{fermion, tension=2}{lmu,v1}
+\fmf{fermion, tension=2}{v3,rmu}
+\fmf{fermion,label=$q$, label.side=right}{v1,v3}
+\fmffreeze
+\fmf{dashes,left=0.4, tension=0.5}{v1,v2}
+\fmf{dashes,left=0.4, tension=0.5}{v2,v3}
+\fmf{photon}{v2,gamma}
+\fmfv{label=$\mu$}{lmu}
+\fmfv{label=$\mu$}{rmu}
+\fmfv{label=$\gamma$}{gamma}
+\fmfv{label=LQ, label.angle=-90, label.dist=12}{v2}
+\end{fmfgraph*}
+\end{fmffile}
+\end{document}

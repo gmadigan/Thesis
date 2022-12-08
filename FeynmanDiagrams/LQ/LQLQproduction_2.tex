@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{feynmp}
+\begin{document}
+\[\begin{fmffile}{feyngraph}
+\begin{fmfgraph*}(200,100)
+\fmfleft{g1,g2}
+\fmfright{LQbar,LQ}
+\fmf{fermion}{g2,v1,g1}
+\fmf{gluon,l.d=12,label=$g$}{v1,v2}
+\fmf{dashes_arrow}{LQbar,v2,LQ}
+\fmflabel{LQ}{LQ}
+\fmflabel{$\overline {\mathrm{LQ}}$}{LQbar}
+\fmflabel{$\bar q$}{g1}
+\fmflabel{$q$}{g2}
+\end{fmfgraph*}
+\end{fmffile}
+\]
+\end{document}

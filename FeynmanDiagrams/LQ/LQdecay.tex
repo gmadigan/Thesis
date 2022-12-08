@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{feynmp}
+\begin{document}
+\begin{fmffile}{feyngraph}
+\begin{fmfgraph*}(200,100)
+\fmfleft{LQ}
+\fmfright{q,ell}
+\fmf{dashes_arrow,tension=1.5}{LQ,v1}
+%\fmf{gluon,l.d=12,label=$g$}{v1,v2}
+\fmf{fermion}{v1,q}
+\fmf{fermion}{v1,ell}
+%\fmf{dashes,label=$LQ$,l.s=left}{v2,v4}
+%\fmf{phantom,tension=.1}{v2,g2}
+%\fmf{phantom,tension=.1}{g2,v3}
+%\fmf{phantom,tension=.1}{v2,v4}
+%\fmf{phantom,tension=.1}{g1,v4}
+%\fmf{phantom,tension=.1}{v3,v4}
+%\fmf{fermion}{mu,v4,b}
+%\fmf{fermion}{bbar,v3,muplus}
+%\fmflabel{$\mu^{-}$}{mu}
+%\fmflabel{$\mu^{+}$}{muplus}
+\fmflabel{LQ}{LQ}
+%\fmflabel{$\overline {\mathrm{LQ}}$}{LQbar}
+\fmflabel{$q$}{q}
+\fmflabel{$\ell$}{ell}
+\end{fmfgraph*}
+\end{fmffile}
+\end{document}

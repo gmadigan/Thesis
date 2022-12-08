@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{feynmp}
+\begin{document}
+\Large
+\begin{fmffile}{feyngraph}
+\begin{fmfgraph*}(200,100)
+\fmfstraight
+
+\fmfleft{q,g}
+\fmfright{l,LQ}
+
+\fmf{gluon}{g,v1}
+\fmf{fermion}{q,v1}
+\fmf{fermion,label=$q$}{v1,v2}
+\fmf{dashes_arrow}{v2,LQ}
+\fmf{fermion}{l,v2}
+
+\fmflabel{LQ}{LQ}
+\fmflabel{$\ell^+$}{l}
+\fmflabel{$g$}{g}
+\fmflabel{$q$}{q}
+\end{fmfgraph*}
+\end{fmffile}
+\end{document}
