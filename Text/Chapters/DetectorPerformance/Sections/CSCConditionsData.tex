@@ -1,0 +1,47 @@
+
+
+
+\subsection{Alignment}
+
+ Sources of misalignment within the muon spectrometer include: chamber construction tolerances, e.g., wire-positioning; detector assembly, opening, and closing tolerances, and static deformations in the YE disks from magnetic field distortions can all result in individual chamber displacement of up to several cm from their nominal positions; and dynamic sub-millimeter misalignment from temperature fluctuations during operation. To capitalize on the \SI{100}{\micro m}-level rechit resolution in the muon system, knowledge of each sensor and module position must be aquired to an even greater precision. The Muon Alignment (MA) system continuously monitors the detector geometry with LEDs and laser beams, along with distance and angle measuring devices. All 250 DTs are continuosuly monitored, while only 12 select CSCs are monitored in each ME station are directly monitored.
+
+
+\subsection{Electronics calibration}\label{sec:CSCcalib}
+
+CSC front-end electronics require calibration to homogenize the signals in each cathode channel for HLT and offline reconstruction. Periodic tests are performed by the CSC Operations Group to configure parameters for each electronics module and extract the data needed to calibrate, usually at the start of LHC runs or after major changes to the CSCs have been made. Each CFEB on a CSC reads 96 cathode strip channels distributed accross six 16-channel amplifier-shaper ASIC chips. The shaper-amplifiers are sampled every \SI{50}{ns} and voltages are stored by the same number of 16-channel SCAs while waiting for an L1A (latency of 120 bunch crossings). The amplifier-shaper chips come equipped with internal capacitors for generating test pulses. Calibration runs inject these test pulses into all cathode channels, and by measuring the corresponding output, the constants needed to calibrate each channel can be extracted, specifically:
+\begin{itemize}
+    \item Strip channel electronic gains
+    \item Strip pedestals
+    \item Strip channel noise
+    \item Strip-to-strip crosstalk
+\end{itemize}
+Calibrating these parameters can improve the accuracy of hit positions in recorded data reconstruction and allow for more truthful modeling of the CSCs in simulation.
+
+\subsubsection{Gains}
+Electronic gain in each strip channel is measured by incrementing the test pulse amplitude and sampling the output. During reconstruction of muon hit positions, the raw pulse heights in each channel are normalized to the average pulse-height gain accross all channels in all CSCs.
+
+\subsubsection{Pedestals}
+Pedestal values for each strip are gathered by sampling the amplifier output at \SI{20}{MHz} without any input signal and measuring the charge in each SCA bin, referred to as ``static'' pedestals. Static pedestals are used in simulation to supply a baseline for simulated signals. High-rates during normal operation can result in a baseline shift. To account for this, reconstruction instead uses ``dynamic'' pedestals, where the average charge on each strip of only the first two SCA time bins---prior to the signal arrival---are taken as the pedestal values. 
+
+\subsubsection{Noise matrix}
+As the pedestal noise (RMS) is correlated accross SCA time bins, it can be described for each strip by the covarience between the charge in each SCA time bin, forming a symmetric ``noise matrix.'' Each element of the noise matrix is defined as 
+\begin{equation}
+C_{ij} = \langle Q_i \cdot Q_j \rangle - \langle Q_i \rangle \cdot \langle Q_j \rangle,
+\end{equation}
+where $Q_i$ is the charge in SCA time bin $i$, and the average is taken over many calibration runs.
+
+\subsubsection{Crosstalk}
+Undesirable signal transfer called crosstalk can occur between neighboring strips in a CSC through inductive coupling. To measure the effect, an approximate delta-function pulse is fired into each amplifier channel. The induced charge on an adjacent strip normalized to the charge deposited on a strip are measured in each SCA time bin. This charge ratio is then convoluted with the expected ion drift time and electron arrival time distributions to model the amplifier response to a pulse shape typically seen during CSC operation (instead of a delta-function pulse). The  crosstalk fraction for each channel, per SCA time bin, is defined as the ratio of the left or right neighboring strips divided by the sum of all three adjacent strips. Crosstalk fractions ordinarily range from 5~\% to 10~\%. As the crosstalk fraction is linear in time (within \SI{160}{ns} of the charge peak), it can be encoded for each channel into just four constants: the slope and intercept of a straight line representing the crosstalk coupling to the left and right neighbors of a strip as a function of SCA time bin. For every strip and SCA time bin, these conditions are stored as a $3\times3$ matrix whose elements transform the measured charges on a strip and its two neighbors to the input charge on the strip. The matrices are used in simulated data to model crosstalk, while the inverse matrices can be applied in recorded data to remove the effect of crosstalk.
+
+\subsection{Offline timing corrections}
+
+In addition to supplying the muon system with precise muon track postions and directions, the CSCs assist the RPCs in determining the arrival time of muons in the endcaps. As mentioned in Sec.~\ref{sec:CSCcalib}, the CFEB amplifier channels are only sampled every \SI{50}{ns}, where the first two of the eight SCA time bins are used to measure the dynamic pedestal. To obtain a precise measurement of the arrival time of a signal peak, the signal shape is compared to the known analytical form of the pulse shaped by the CFEB amplifier-shaper ASICs. The resulting rechit time resolution in each CSC is measured to be \SI{5}{ns}. The average cathode rechit times in each chamber are shifted to zero using ``heuristic'' corrections that are data-derived using muons from collisions. Anode clocks are more coarse-grain than the cathode timing, defined by identifying the closest cathode time bin with a \SI{12.5}{ns} resolution, modulo a roughly \SI{205}{ns} offset. Cathode hit times and anode hit times are combined to arrive at CSC segment times. A Gaussian fit to the segment time distribution in each chamber provides a segment timing resolution of roughly \SI{3}{ns}.
+
+\subsection{Dead channels and chambers}
+
+During operation, it is possible for CSC strip and wire channels to die, and in more extreme cases, entire chambers. These can sometimes be recovered, but often the chamber is inaccessible, preventing any hands-on intervention to revive it. Dead chambers are identified when CSC data quality monitoring does not see rechits in the chamber. A catalogue of dead channels and chambers for a given period of running are classified as CSC conditions data. While not needed for processing real data, these conditions data are important to accurately model the state of the real CSCs in simulation. In practice, the CSC group only used a list of ``bad'' chambers, represented in simulation by not generating rechits in the channels of those chambers.
+
+\subsection{Mapping, geometry, and gas gain}
+
+Other CSC conditions data are stored in the conditions database but are never updated. Electronics cable mapping (for crates, chambers, and DDUs) are used in real data as hardware labels to geometric values. CSC strip and wire geometry information is used in simulation for digitization and in real data during local reconstruction. Chamber parameters traditionally associated with strip and wire geometry are likewise used in simulation and real data. Precise corrections to the system gas gain were derived in a detailed analysis during Run I.
+  
