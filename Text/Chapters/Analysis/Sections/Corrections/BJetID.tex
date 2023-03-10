@@ -1,0 +1,26 @@
+b-Jet identification and non-b-jet misidentification efficiencies can differ between data and MC. To account for these differences, corrections need to be applied to each event in simulation. Per-jet scale factors that are flavor-, \pt-, and \pseudorap-dependent are measured by the BTV POG. Several recommendations for combining these per-jet scale factors into a per-event weight $w$ exist and are described by the BTV POG on the Twiki page in Ref.~\cite{BTagSF}. As this analysis only considers b-tagging on the two leading jets, a method that does not demand measuring the b-jet identification efficiencies in MC can be used. The perscription is as follows: for an event with $n$ b-jets, given the requirement that there is at least one b-jet in the event, the event weight is
+
+\begin{equation}
+  w(\geq1|n) = 1-w(0|n),
+\end{equation}
+
+where $w(0|n)$ is the weight for events with $n$ b-jets, given the requirement that there are at least zero b-jets in the event, defined as
+
+\begin{equation}
+  w(0|n) = \prod^{n}_{i=1}(1-\text{SF}_i).
+\end{equation}
+
+where $i$ indexes the b-jets in the event and SF$_i$ is the scale factor for b-jet $i$. The BTV POG recommended scale factors used in this analysis are listed in Table~\ref{tab:btagsf} and are availible on the Twiki pages in Refs.~\cite{BtagTwiki2016}\cite{BtagTwiki2017}\cite{BtagTwiki2018}. The scale factors are added to MC samples in NanoAOD post-processing.
+
+\begin{table}[htb]
+  \caption{Recommended b-jet identification efficiency scale factors used in this analysis listed by year. The observed data reprocessing and MC campaigns used in extracting each scale factor set are also provided.}
+  \begin{center}
+    \begin{tabular}{llll}\hline\hline
+      Year  & Data Reprocessing                    & MC Campaign   & b-Jet Tag Scale Factors            \\ \hline
+      2016  & 17Jul2018 ReReco [B-F]               & RunIISummer16 & {DeepJet\_2016LegacySF\_V1.csv}    \\
+      2017  & 31Mar2018 ReReco [B-F]               & RunIIFall17   & {DeepFlavour\_94XSF\_V3\_B\_F.csv} \\
+      2018  & 17Sep2018 ReReco/PromptReco [A-C/D]  & RunIIAutumn18 & {DeepJet\_102XSF\_V1.csv}          \\ \hline \hline
+    \end{tabular}
+    \label{tab:btagsf}
+  \end{center}
+\end{table}

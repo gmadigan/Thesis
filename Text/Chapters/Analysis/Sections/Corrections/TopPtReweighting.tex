@@ -1,0 +1,39 @@
+Events in \ttbar simulation are NNLO-reweighted to correct for known mismodeling of top \pt distributions~\cite{topPtReweight13TeV}. Corrections follow the reccomendation of the Top POG. SFs are extracted from a fit to the ratio of the NNLO theoretical cross-section to fully inclusive MC event yields as a function of generator-level top or antitop \pt~\cite{topPtReweightSlides}. The functional form of the fit is the exponential:
+
+\begin{equation}
+  \text{SF}(\pt) = \text{exp}\left(a_1 + a_2 \pt + a_3 \pt^2 + \frac{a_4}{\pt + a_5}\right),
+\end{equation}
+
+where \pt is the generator-level top or antitop \pt, and $a_i$ are fit parameters, listed in Table~\ref{tab:topptparams}. The SFs for top and antitop \pt are combined into an overall event weight $w$:
+
+\begin{equation}
+  \label{eq:topptweight}
+  w = \sqrt{\text{SF}(p_{\text{T, top}})\text{SF}(p_{\text{T, antitop}})},
+\end{equation}
+
+and applied to \ttbar events in 2016, 2017, and 2018 MC. As 2016 MC use the CUET tune, an additional weight is required, applied only to \ttbar events in 2016 MC on top of the aforementioned reweighting. The additional weight follows the same definition in eq.~\ref{eq:topptweight}, but the SFs are extracted from a different fit, of the form:
+
+\begin{equation}
+  \text{SF}(\pt) = \text{exp}\left(b_1 + b_2\tanh\left(b_3 + b_4 \pt\right)\right),
+\end{equation}
+
+where \pt is again the generator-level top or antitop \pt and $b_i$ are fit parameters, listed in Table~\ref{tab:topptparams}.
+
+\begin{table}[htb]
+  \caption{Fit parameters used in Top \pt reweighting SFs.}
+  \begin{center}
+    \begin{tabular}{lc}\hline\hline
+      Parameter  & Value \\ \hline
+      $a_1$ & \num{-2.02274e-1} \\
+      $a_2$ & \num{1.09734e-4} \\
+      $a_3$ & \num{-1.30088e-7} \\
+      $a_4$ & \num{5.83494e1} \\
+      $a_5$ & \num{1.96252e2} \\
+      $b_1$ & \num{1.04554e0} \\
+      $b_2$ & \num{5.19012e-2} \\
+      $b_3$ & \num{-1.72927e0} \\
+      $b_4$ & \num{2.57113e-3} \\ \hline \hline
+    \end{tabular}
+    \label{tab:topptparams}
+  \end{center}
+\end{table}

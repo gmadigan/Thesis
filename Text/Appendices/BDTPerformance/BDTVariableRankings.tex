@@ -1,0 +1,631 @@
+TMVA provides for each BDT a ranking of the input variables by their importance to the training. Importance here can be understood as a measure of the variable's discrimination power, so higher ranking variables contribute more to the separation of signal and background. Several precise definitions of importance are provided in Ref.~\cite{TMVA}. We use the BDT-specific ranking, which defines the importance of a variable (ranging from 0 to 1), as the frequency it is used to split decision tree nodes, weighted by the separation gain squared and the number of events in the node. The ranking and importance of all 11 input variables in each BDT are provided in Tables~\ref{tab:bdtRank300}--\ref{tab:bdtRank4000}.
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{300}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.316e-01 \\
+			2. & \MujOne & 1.175e-01 \\
+			3. & \ptof{\PmuTwo} & 1.078e-01 \\
+			4. & \Muu & 9.792e-02 \\
+			5. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 9.611e-02 \\
+			6. & \Muujj & 8.920e-02 \\
+			7. & \MET & 8.023e-02 \\
+			8. & \ptof{\PmuOne} & 7.219e-02 \\
+			9. & \ptof{\PjOne} & 7.099e-02 \\
+			10. & \ptof{\PjTwo} & 6.964e-02 \\
+			11. & \ST & 6.688e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank300}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{400}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.339e-01 \\
+			2. & \MujOne & 1.312e-01 \\
+			3. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 1.049e-01 \\
+			4. & \Muujj & 8.754e-02 \\
+			5. & \ptof{\PmuTwo} & 8.529e-02 \\
+			6. & \MET & 8.105e-02 \\
+			7. & \ST & 8.096e-02 \\
+			8. & \ptof{\PjOne} & 8.011e-02 \\
+			9. & \ptof{\PjTwo} & 7.305e-02 \\
+			10. & \Muu & 7.226e-02 \\
+			11. & \ptof{\PmuOne} & 6.969e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank400}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{500}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.260e-01 \\
+			2. & \MujOne & 1.260e-01 \\
+			3. & \ST & 9.914e-02 \\
+			4. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 9.020e-02 \\
+			5. & \ptof{\PmuTwo} & 8.933e-02 \\
+			6. & \ptof{\PjOne} & 8.659e-02 \\
+			7. & \Muujj & 8.243e-02 \\
+			8. & \ptof{\PjTwo} & 7.572e-02 \\
+			9. & \ptof{\PmuOne} & 7.554e-02 \\
+			10. & \MET & 7.515e-02 \\
+			11. & \Muu & 7.386e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank500}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{600}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.336e-01 \\
+			2. & \MujOne & 1.230e-01 \\
+			3. & \ST & 1.132e-01 \\
+			4. & \Muujj & 8.680e-02 \\
+			5. & \ptof{\PmuTwo} & 8.241e-02 \\
+			6. & \ptof{\PjOne} & 8.165e-02 \\
+			7. & \ptof{\PmuOne} & 8.148e-02 \\
+			8. & \MET & 7.777e-02 \\
+			9. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.666e-02 \\
+			10. & \Muu & 7.424e-02 \\
+			11. & \ptof{\PjTwo} & 6.916e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank600}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{700}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujOne & 1.330e-01 \\
+			2. & \MujTwo & 1.254e-01 \\
+			3. & \ST & 1.213e-01 \\
+			4. & \Muujj & 9.052e-02 \\
+			5. & \ptof{\PjOne} & 8.495e-02 \\
+			6. & \ptof{\PmuTwo} & 7.970e-02 \\
+			7. & \ptof{\PjTwo} & 7.909e-02 \\
+			8. & \ptof{\PmuOne} & 7.734e-02 \\
+			9. & \MET & 7.557e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.755e-02 \\
+			11. & \Muu & 6.561e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank700}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{800}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujOne & 1.261e-01 \\
+			2. & \MujTwo & 1.244e-01 \\
+			3. & \ST & 1.201e-01 \\
+			4. & \MET & 9.470e-02 \\
+			5. & \Muujj & 8.987e-02 \\
+			6. & \ptof{\PmuOne} & 8.710e-02 \\
+			7. & \ptof{\PmuTwo} & 8.143e-02 \\
+			8. & \ptof{\PjOne} & 7.737e-02 \\
+			9. & \ptof{\PjTwo} & 7.279e-02 \\
+			10. & \Muu & 6.371e-02 \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.240e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank800}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{900}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \ST & 1.390e-01 \\
+			2. & \MujOne & 1.197e-01 \\
+			3. & \MujTwo & 1.178e-01 \\
+			4. & \Muujj & 9.077e-02 \\
+			5. & \MET & 8.502e-02 \\
+			6. & \ptof{\PmuTwo} & 8.346e-02 \\
+			7. & \ptof{\PmuOne} & 7.988e-02 \\
+			8. & \ptof{\PjTwo} & 7.885e-02 \\
+			9. & \ptof{\PjOne} & 7.117e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.851e-02 \\
+			11. & \Muu & 6.585e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank900}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1000}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \ST & 1.532e-01 \\
+			2. & \MujTwo & 1.275e-01 \\
+			3. & \MujOne & 1.053e-01 \\
+			4. & \Muujj & 9.230e-02 \\
+			5. & \ptof{\PmuTwo} & 8.575e-02 \\
+			6. & \ptof{\PmuOne} & 8.449e-02 \\
+			7. & \ptof{\PjOne} & 7.982e-02 \\
+			8. & \ptof{\PjTwo} & 7.372e-02 \\
+			9. & \MET & 7.007e-02 \\
+			10. & \Muu & 6.714e-02 \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.071e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1000}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1100}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.276e-01 \\
+			2. & \ST & 1.229e-01 \\
+			3. & \MET & 1.127e-01 \\
+			4. & \MujOne & 1.016e-01 \\
+			5. & \Muujj & 1.000e-01 \\
+			6. & \ptof{\PmuOne} & 8.213e-02 \\
+			7. & \ptof{\PmuTwo} & 7.891e-02 \\
+			8. & \ptof{\PjOne} & 7.566e-02 \\
+			9. & \ptof{\PjTwo} & 7.151e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.404e-02 \\
+			11. & \Muu & 6.297e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1100}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1200}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.494e-01 \\
+			2. & \ST & 1.323e-01 \\
+			3. & \MujOne & 1.096e-01 \\
+			4. & \Muujj & 9.828e-02 \\
+			5. & \ptof{\PmuOne} & 8.315e-02 \\
+			6. & \ptof{\PmuTwo} & 8.204e-02 \\
+			7. & \MET & 7.737e-02 \\
+			8. & \ptof{\PjTwo} & 7.249e-02 \\
+			9. & \ptof{\PjOne} & 6.929e-02 \\
+			10. & \Muu & 6.444e-02 \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.156e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1200}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1300}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.492e-01 \\
+			2. & \ST & 1.296e-01 \\
+			3. & \MujOne & 1.174e-01 \\
+			4. & \Muujj & 1.057e-01 \\
+			5. & \ptof{\PjTwo} & 8.238e-02 \\
+			6. & \ptof{\PmuOne} & 8.118e-02 \\
+			7. & \ptof{\PmuTwo} & 8.056e-02 \\
+			8. & \ptof{\PjOne} & 6.887e-02 \\
+			9. & \Muu & 6.694e-02 \\
+			10. & \MET & 6.032e-02 \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 5.788e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1300}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1400}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.537e-01 \\
+			2. & \MujOne & 1.209e-01 \\
+			3. & \ST & 1.019e-01 \\
+			4. & \Muujj & 1.007e-01 \\
+			5. & \ptof{\PmuTwo} & 8.807e-02 \\
+			6. & \ptof{\PjTwo} & 8.733e-02 \\
+			7. & \ptof{\PmuOne} & 7.619e-02 \\
+			8. & \ptof{\PjOne} & 7.316e-02 \\
+			9. & \Muu & 7.111e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.100e-02 \\
+			11. & \MET & 5.591e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1400}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1500}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.400e-01 \\
+			2. & \ST & 1.150e-01 \\
+			3. & \MujOne & 1.147e-01 \\
+			4. & \Muujj & 9.521e-02 \\
+			5. & \Muu & 8.781e-02 \\
+			6. & \ptof{\PjTwo} & 8.158e-02 \\
+			7. & \ptof{\PmuTwo} & 8.020e-02 \\
+			8. & \ptof{\PmuOne} & 7.542e-02 \\
+			9. & \MET & 7.245e-02 \\
+			10. & \ptof{\PjOne} & 6.946e-02 \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.821e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1500}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1600}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.338e-01 \\
+			2. & \ST & 1.227e-01 \\
+			3. & \ptof{\PjTwo} & 1.111e-01 \\
+			4. & \Muujj & 1.002e-01 \\
+			5. & \MujOne & 9.860e-02 \\
+			6. & \ptof{\PmuTwo} & 8.682e-02 \\
+			7. & \ptof{\PmuOne} & 8.278e-02 \\
+			8. & \Muu & 7.693e-02 \\
+			9. & \ptof{\PjOne} & 7.581e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.950e-02 \\
+			11. & \MET & 4.178e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1600}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1700}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.328e-01 \\
+			2. & \ST & 1.300e-01 \\
+			3. & \MujOne & 9.870e-02 \\
+			4. & \Muujj & 9.638e-02 \\
+			5. & \ptof{\PmuTwo} & 9.447e-02 \\
+			6. & \Muu & 9.214e-02 \\
+			7. & \ptof{\PjTwo} & 8.244e-02 \\
+			8. & \ptof{\PmuOne} & 7.774e-02 \\
+			9. & \ptof{\PjOne} & 7.601e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.192e-02 \\
+			11. & \MET & 4.745e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1700}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1800}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.471e-01 \\
+			2. & \ST & 1.389e-01 \\
+			3. & \MujOne & 9.756e-02 \\
+			4. & \Muujj & 9.420e-02 \\
+			5. & \ptof{\PjTwo} & 8.762e-02 \\
+			6. & \ptof{\PmuTwo} & 8.128e-02 \\
+			7. & \ptof{\PmuOne} & 7.982e-02 \\
+			8. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.767e-02 \\
+			9. & \ptof{\PjOne} & 7.610e-02 \\
+			10. & \Muu & 7.398e-02 \\
+			11. & \MET & 4.582e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1800}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{1900}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.472e-01 \\
+			2. & \ST & 1.046e-01 \\
+			3. & \MujOne & 1.040e-01 \\
+			4. & \Muujj & 1.039e-01 \\
+			5. & \ptof{\PjTwo} & 9.580e-02 \\
+			6. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 8.885e-02 \\
+			7. & \ptof{\PmuTwo} & 8.688e-02 \\
+			8. & \Muu & 8.062e-02 \\
+			9. & \ptof{\PjOne} & 7.420e-02 \\
+			10. & \ptof{\PmuOne} & 6.843e-02 \\
+			11. & \MET & 4.545e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank1900}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2000}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.528e-01 \\
+			2. & \Muujj & 1.229e-01 \\
+			3. & \MujOne & 1.052e-01 \\
+			4. & \ST & 9.633e-02 \\
+			5. & \ptof{\PmuTwo} & 8.396e-02 \\
+			6. & \Muu & 8.386e-02 \\
+			7. & \ptof{\PmuOne} & 8.246e-02 \\
+			8. & \ptof{\PjTwo} & 7.480e-02 \\
+			9. & \ptof{\PjOne} & 7.391e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 6.636e-02 \\
+			11. & \MET & 5.742e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2000}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2100}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.394e-01 \\
+			2. & \Muujj & 1.102e-01 \\
+			3. & \MujOne & 1.079e-01 \\
+			4. & \ST & 9.849e-02 \\
+			5. & \ptof{\PjTwo} & 9.170e-02 \\
+			6. & \ptof{\PmuTwo} & 9.073e-02 \\
+			7. & \Muu & 8.948e-02 \\
+			8. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 8.067e-02 \\
+			9. & \ptof{\PmuOne} & 7.590e-02 \\
+			10. & \ptof{\PjOne} & 6.403e-02 \\
+			11. & \MET & 5.145e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2100}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2200}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.464e-01 \\
+			2. & \MujOne & 1.039e-01 \\
+			3. & \Muujj & 1.017e-01 \\
+			4. & \ST & 9.975e-02 \\
+			5. & \ptof{\PjTwo} & 9.502e-02 \\
+			6. & \Muu & 8.895e-02 \\
+			7. & \ptof{\PmuTwo} & 8.560e-02 \\
+			8. & \ptof{\PjOne} & 7.941e-02 \\
+			9. & \ptof{\PmuOne} & 7.663e-02 \\
+			10. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.222e-02 \\
+			11. & \MET & 5.051e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2200}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2300}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.442e-01 \\
+			2. & \Muu & 1.015e-01 \\
+			3. & \Muujj & 9.754e-02 \\
+			4. & \ptof{\PjTwo} & 9.717e-02 \\
+			5. & \MujOne & 9.690e-02 \\
+			6. & \ST & 9.601e-02 \\
+			7. & \ptof{\PmuTwo} & 9.404e-02 \\
+			8. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 8.741e-02 \\
+			9. & \ptof{\PjOne} & 7.687e-02 \\
+			10. & \ptof{\PmuOne} & 6.720e-02 \\
+			11. & \MET & 4.117e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2300}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2400}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.569e-01 \\
+			2. & \MujOne & 1.209e-01 \\
+			3. & \Muujj & 9.799e-02 \\
+			4. & \ST & 9.690e-02 \\
+			5. & \Muu & 9.151e-02 \\
+			6. & \ptof{\PjTwo} & 8.474e-02 \\
+			7. & \ptof{\PmuTwo} & 8.233e-02 \\
+			8. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 8.222e-02 \\
+			9. & \ptof{\PjOne} & 7.917e-02 \\
+			10. & \ptof{\PmuOne} & 6.313e-02 \\
+			11. & \MET & 4.423e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2400}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2500}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.627e-01 \\
+			2. & \Muujj & 1.043e-01 \\
+			3. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 1.041e-01 \\
+			4. & \ptof{\PjTwo} & 9.902e-02 \\
+			5. & \MujOne & 9.823e-02 \\
+			6. & \Muu & 8.638e-02 \\
+			7. & \ST & 7.879e-02 \\
+			8. & \ptof{\PmuTwo} & 7.725e-02 \\
+			9. & \ptof{\PjOne} & 7.217e-02 \\
+			10. & \ptof{\PmuOne} & 6.300e-02 \\
+			11. & \MET & 5.399e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2500}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2600}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.926e-01 \\
+			2. & \MujOne & 1.097e-01 \\
+			3. & \Muujj & 9.522e-02 \\
+			4. & \ptof{\PjTwo} & 8.970e-02 \\
+			5. & \Muu & 8.736e-02 \\
+			6. & \ptof{\PjOne} & 8.684e-02 \\
+			7. & \ptof{\PmuTwo} & 8.097e-02 \\
+			8. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 7.451e-02 \\
+			9. & \ST & 6.873e-02 \\
+			10. & \ptof{\PmuOne} & 6.480e-02 \\
+			11. & \MET & 4.967e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2600}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2700}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.424e-01 \\
+			2. & \Muujj & 1.136e-01 \\
+			3. & \ST & 1.061e-01 \\
+			4. & \MujOne & 9.354e-02 \\
+			5. & \Muu & 9.253e-02 \\
+			6. & \ptof{\PmuTwo} & 8.819e-02 \\
+			7. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 8.380e-02 \\
+			8. & \ptof{\PjOne} & 8.160e-02 \\
+			9. & \ptof{\PjTwo} & 8.136e-02 \\
+			10. & \ptof{\PmuOne} & 6.445e-02 \\
+			11. & \MET & 5.248e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2700}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2800}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 2.236e-01 \\
+			2. & \MujTwo & 1.185e-01 \\
+			3. & \Muujj & 1.028e-01 \\
+			4. & \ptof{\PjTwo} & 8.594e-02 \\
+			5. & \MujOne & 7.977e-02 \\
+			6. & \ST & 7.824e-02 \\
+			7. & \Muu & 7.467e-02 \\
+			8. & \ptof{\PjOne} & 7.253e-02 \\
+			9. & \ptof{\PmuTwo} & 6.619e-02 \\
+			10. & \ptof{\PmuOne} & 5.698e-02 \\
+			11. & \MET & 4.072e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2800}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{2900}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \MujTwo & 1.365e-01 \\
+			2. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 1.311e-01 \\
+			3. & \Muujj & 1.073e-01 \\
+			4. & \ptof{\PjTwo} & 9.744e-02 \\
+			5. & \MujOne & 9.404e-02 \\
+			6. & \ptof{\PjOne} & 8.725e-02 \\
+			7. & \ST & 7.712e-02 \\
+			8. & \Muu & 7.657e-02 \\
+			9. & \ptof{\PmuTwo} & 6.621e-02 \\
+			10. & \ptof{\PmuOne} & 6.421e-02 \\
+			11. & \MET & 6.217e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank2900}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{3000}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 2.242e-01 \\
+			2. & \MujTwo & 1.426e-01 \\
+			3. & \MujOne & 1.026e-01 \\
+			4. & \Muujj & 8.558e-02 \\
+			5. & \ptof{\PjTwo} & 7.792e-02 \\
+			6. & \ST & 7.135e-02 \\
+			7. & \Muu & 7.114e-02 \\
+			8. & \ptof{\PmuTwo} & 6.500e-02 \\
+			9. & \ptof{\PjOne} & 6.176e-02 \\
+			10. & \ptof{\PmuOne} & 5.723e-02 \\
+			11. & \MET & 4.056e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank3000}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{3500}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & 1.510e-01 \\
+			2. & \ptof{\PjTwo} & 1.254e-01 \\
+			3. & \MujTwo & 1.211e-01 \\
+			4. & \MujOne & 9.907e-02 \\
+			5. & \Muujj & 9.332e-02 \\
+			6. & \ptof{\PjOne} & 9.089e-02 \\
+			7. & \ST & 8.178e-02 \\
+			8. & \ptof{\PmuOne} & 6.857e-02 \\
+			9. & \ptof{\PmuTwo} & 6.209e-02 \\
+			10. & \Muu & 5.962e-02 \\
+			11. & \MET & 4.722e-02 \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank3500}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\caption{A ranking of input variables by their importance in training a BDT with a $\MLQ = \SI{4000}{GeV}$ signal sample.}
+	\begin{center}
+		\begin{tabular}{lll} \hline \hline
+			Rank & Variable & Importance  \\ \hline
+			1. & \Muu & -nan \\
+			2. & \Muujj & -nan \\
+			3. & \MujOne & -nan \\
+			4. & \MujTwo & -nan \\
+			5. & \ST & -nan \\
+			6. & \MET & -nan \\
+			7. & \ptof{\PmuOne} & -nan \\
+			8. & \ptof{\PmuTwo} & -nan \\
+			9. & \ptof{\PjOne} & -nan \\
+			10. & \ptof{\PjTwo} & -nan \\
+			11. & \DRof{\PmuOne+\PmuTwo}{\PjOne} & -nan \\ \hline \hline
+		\end{tabular}
+		\label{tab:bdtRank4000}
+	\end{center}
+\end{table}

@@ -1,5 +1,6 @@
 %% Gabriel Madigan's PhD Thesis 
-%% 19 October 2022
+%% First draft: 19 October, 2022
+%% Current draft: 9 March, 2023
 
 \documentclass[thesis]{neu}
 \input{packages}
@@ -55,8 +56,8 @@ Professor Darien Wood
 
 % Build the desired chapters 
 
-\chapter{Introduction} \label{chapter:Introduction}
-\input{Text/Chapters/Introduction/Introduction}
+%\chapter{Introduction} \label{chapter:Introduction}
+%\input{Text/Chapters/Introduction/Introduction}
 
 \chapter{Theoretical background} \label{chapter:Theory}
 \input{Text/Chapters/Theory/Theory_main}
@@ -76,8 +77,8 @@ Professor Darien Wood
 \chapter{Future leptoquark searches} \label{chapter:FutureLQSearches}
 \input{Text/Chapters/FutureLQSearches/FutureLQSearches}
 
-\chapter{Conclusion} \label{chapter:Conclusion}
-\input{Text/Chapters/Conclusion/Conclusion}
+%\chapter{Conclusion} \label{chapter:Conclusion} 
+%\input{Text/Chapters/Conclusion/Conclusion}
 
 %%-- Bibliography 
 \bibliographystyle{unsrt} % unsrt does not work with natbib
@@ -86,29 +87,28 @@ Professor Darien Wood
     
 \clearpage
 \appendix
-\chapter{3D optimization} \label{app:3DOptimization}
-\input{Text/Appendices/3dOptimization}
 
-\clearpage
-\chapter{BDT performance} \label{app:BDTPerformance}
-\input{Text/Appendices/BDTPerformance}
-
-\clearpage
 \chapter{GE estimation of MES uncertainty} \label{app:GEScaleSyst}
 \input{Text/Appendices/GEScaleSyst}
-
-\clearpage
-\chapter{HEM 15/16 failure study} \label{qpp:HEMFailure}
-\input{Text/Appendices/HEMFailure}
 
 \clearpage
 \chapter{Background normalization scale factors} \label{app:SFStudy}
 \input{Text/Appendices/SFStudy}
 
 \clearpage
+\chapter{BDT performance} \label{app:BDTPerformance}
+\input{Text/Appendices/BDTPerformance/BDTPerformance}
+
+\clearpage
+\chapter{HEM 15/16 failure study} \label{app:HEMFailure}
+\input{Text/Appendices/HEMFailure}
+
+\clearpage
 \chapter{Simulated LQ samples} \label{app:SimLQSamples}
 \input{Text/Appendices/SimLQSamples}
-    
-    
+
+\clearpage
+\chapter{3D optimization} \label{app:3DOptimization}
+\input{Text/Appendices/3dOptimization}
 
 \end{document}

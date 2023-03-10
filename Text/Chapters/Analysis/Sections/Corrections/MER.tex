@@ -1,0 +1,7 @@
+Muon momenta are corrected in MC to better match the estimated resolution in data by applying a \mom- and \pseudorap-dependent gaussian smearing. The Rochester method for correcting MES described in Section~\ref{sec:MES} also correct for Muon Momentum Resolution (MER). As this analysis uses high-\pt muons, an additional resolution correction is required. The extra smearing is defined as the relative difference in resolution between data and MC measured on the Z mass: $\sigma_{\text{extra}} = \sqrt{\sigma_{\text{data}}^2 - \sigma_{\text{MC}}^2}$. To apply the resolution corrections, muon momenta in MC are reassigned as follows: 
+
+\begin{equation}
+  \mom \rightarrow \mom(1 + \text{Gauss}(0,~\gamma\sigma(\mom,~\pseudorap))), 
+\end{equation}
+
+where $\text{Gauss}(\alpha,~\beta)$ is a number drawn randomly from a Gaussian distribution (where $\alpha$ is the mean and $\beta$ is the standard deviation), $\gamma$ is a smearing factor, with $\gamma=0.57$ corresponding to a $\sigma_{\text{extra}} = \SI{15}{\%}$ smearing, and $\sigma(\mom,~\pseudorap)$ is a momentum resolution parametrization defined on the Twiki pages in Refs.~\cite{MuonTwiki2016}\cite{MuonTwiki2017}\cite{MuonTwiki2018}. Muons in 2017 and 2018 MC see good resolution agreement with data within $\abspseudorap < 1.2$, so resolution smearing is only applied to muons outside $\abspseudorap > 1.2$. For muons in 2016 MC, good resolution agreement with data is observed for all \abspseudorap, so no resolution smearing is applied. 

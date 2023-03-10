@@ -1,0 +1,7 @@
+Following the Muon POG recommendation for analyses with high-\pt muons, corrections to muon reconstruction efficiency are applied. Efficiencies are extracted using the Tag \& Probe method described above, however, the selection criteria for tags and probes slightly differ from the ID and isolation requirements. Notably, probes are tracker muons, while passing probes must be reconstructed as global muons. The reconstruction corrections are \mom- and \pseudorap-dependent scale factors applied as event weights. Scale factors are measured separately for each year and are binned in \pt at 50, 100, 150, 200, 300, 400, 600 1500, and \SI{3500}{\GeV} (muons outside of the 50--\SI{3500}{\GeV} range are adopted into the lowest or highest bin) and divided by \abspseudorap above and below 1.6.
+
+Reconstruction efficiency scale factors for high-\pt muons are measured by the Muon POG~\cite{MUO-17-001}\cite{AN-18-008}. The values are provided in a table (along with each scale factor's statistical and systematic uncertainty) on the TWiki pages in Refs.~\cite{MuonTwiki2016}\cite{MuonTwiki2017}\cite{MuonTwiki2018}. Per-muon HLT efficiency scale factors \SF{RECO}{\PmuOne} and \SF{RECO}{\PmuTwo} are converted to a per-event scale factor \SF{RECO}{event} by the following formula:
+
+\begin{equation}
+  \SF{RECO}{event} = \SF{RECO}{\PmuOne} \SF{RECO}{\PmuTwo}.
+\end{equation}
