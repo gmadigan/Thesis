@@ -1,29 +1,144 @@
 % ref: https://gitlab.cern.ch/tdr/utils/-/blob/master/general/ptdr-definitions.sty
 
-\newcommand{\SUthreeC}{\ensuremath{\mathrm{SU(3)_{C}}}}
-\newcommand{\SUtwoW}{\ensuremath{\mathrm{SU(2)_{W}}}}
-\newcommand{\UoneY}{\ensuremath{\mathrm{U(1)_{Y}}}}
-\newcommand{\SUthree}{\ensuremath{\mathrm{SU(3)}}}
-\newcommand{\SUtwo}{\ensuremath{\mathrm{SU(2)}}}
-\newcommand{\Uone}{\ensuremath{\mathrm{U(1)}}}
+% SM Theory
 
-\newcommand{\LQ}{\ensuremath{\mathrm{LQ}}}
-\newcommand{\LQbar}{\ensuremath{\mathrm{\overline{LQ}}}}
+% Gaugue Groups
+\newcommand{\SUthreeC}{\ensuremath{\mathrm{SU(3)_{C}}}\xspace}
+\newcommand{\SUtwoW}{\ensuremath{\mathrm{SU(2)_{W}}}\xspace}
+\newcommand{\UoneY}{\ensuremath{\mathrm{U(1)_{Y}}}\xspace}
+\newcommand{\SUthree}{\ensuremath{\mathrm{SU(3)}}\xspace}
+\newcommand{\SUtwo}{\ensuremath{\mathrm{SU(2)}}\xspace}
+\newcommand{\Uone}{\ensuremath{\mathrm{U(1)}}\xspace}
 
-\newcommand{\Htogg}{$\mathrm{H}\to\gamma\gamma$\xspace}
-\newcommand{\Ztoee}{$\mathrm{Z}\to\mathrm{e}^{+}\mathrm{e}^{-}$\xspace}
-\newcommand{\Ztommg}{$\mathrm{Z}\to\mu^{+}\mu^{-}\gamma$\xspace}
+% Particles and Quantum numbers
+\newcommand{\YW}{\ensuremath{Y_{\text{W}}}\xspace}
+\newcommand{\Tthree}{\ensuremath{T_3}\xspace}
+\newcommand{\weakangle}{\ensuremath{\theta_{\text{W}}}\xspace}
+\newcommand{\PWewt}[1]{\HepParticle{\PW}{#1}{}\xspace}
+\newcommand{\PBewt}{\HepParticle{B}{}{}\xspace}
+\newcommand{\gammamu}{\ensuremath{\gamma^{\mu}}\xspace}
+\newcommand{\spinor}[3]{\ensuremath{#1_{\textrm{#2}}^{\textrm{#3}}}\xspace}
+\newcommand{\antispinor}[3]{\ensuremath{\overline{#1}_{\textrm{#2}}^{\textrm{#3}}}\xspace}
 
-\newcommand{\ptgg}{$\pt^{\gamma\gamma}$\xspace}
-\newcommand{\mgg}{\ensuremath{m_{\gamma\gamma}}\xspace}
 
-% \newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
-% \newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
-% \newcommand{\ptmiss}{\ensuremath{\pt^\text{miss}}\xspace}
+% Experimental quantities
+\newcommand{\Ratio}[1]{\ensuremath{R_{\text{#1}}}\xspace}
+\newcommand{\gmuon}{\ensuremath{g_{\Pmu}}\xspace}
+\newcommand{\amuon}{\ensuremath{a_{\Pmu}}\xspace}
 
-% \DeclareRobustCommand{\PH}{{\HepParticle{H}{}{}}\Xspace} % standard/heavy Higgs
+% LQ-analysis-specific recurring physics processes, physics objects, variables, etc.
 
-\newcommand{\PH}{H}
+% Signal processes
+\newcommand{\LQ}{\HepParticle{LQ}{}{}\xspace}
+\newcommand{\LQbar}{\HepAntiParticle{LQ}{}{}\xspace}
+\newcommand{\LQToBMuPair}{\HepProcess{\LQ\LQbar \to \Pbottom\APbottom \Pmuon\APmuon}\xspace}
+
+% Final state particles/objects
+\newcommand{\Pj}{\HepParticle{j}{}{}\xspace}
+\newcommand{\jet}{\HepParticle{jet}{}{}\xspace}
+\newcommand{\jets}{\HepParticle{jets}{}{}\xspace}
+
+\newcommand{\PmuOne}{\HepParticle{\Pmu}{1}{}\xspace}
+\newcommand{\PmuTwo}{\HepParticle{\Pmu}{2}{}\xspace}
+\newcommand{\PjOne}{\HepParticle{\Pj}{1}{}\xspace}
+\newcommand{\PjTwo}{\HepParticle{\Pj}{2}{}\xspace}
+\newcommand{\jetOne}{\HepParticle{\jet}{1}{}\xspace}
+\newcommand{\jetTwo}{\HepParticle{\jet}{2}{}\xspace}
+\newcommand{\muonOne}{\HepParticle{muon}{1}{}\xspace}
+\newcommand{\muonTwo}{\HepParticle{muon}{2}{}\xspace}
+
+\newcommand{\mumubj}{\HepProcess{\Pmu\Pmu\Pbottom\Pj}\xspace}
+\newcommand{\mumubb}{\HepProcess{\Pmu\Pmu\Pbottom\Pbottom}\xspace}
+
+% Background particles/processes
+\newcommand{\PV}{\HepParticle{V}{}{}\xspace}
+\newcommand{\ttbar}{\HepProcess{\Ptop\APtop}\xspace}
+\newcommand{\VV}{\HepProcess{\PV\PV}\xspace}
+\newcommand{\TTV}{\HepProcess{\ttbar\PV}\xspace}
+\newcommand{\ZJETS}{\HepProcess{\PZ/\Pgammastar + \jets}\xspace}
+\newcommand{\TTJETS}{\HepProcess{\ttbar + \jets}\xspace}
+\newcommand{\WJETS}{\HepProcess{\PW + \jets}\xspace}
+\newcommand{\VVJETS}{\HepProcess{\VV + \jets}\xspace}
+\newcommand{\bbbar}{\HepProcess{\Pbottom\APbottom}\xspace}
+
+% Background processes by dataset
+% DY
+\newcommand{\DYJetsToLL}{\HepProcess{\PZ/\Pgammastar \to \Pleptonminus\Pleptonplus}\xspace}
+
+% tt-bar
+\newcommand{\TTToHadronic}{\HepProcess{\ttbar \to \bbbar\Pq\Pq\Pq\Pq}\xspace}
+\newcommand{\TTToSemiLeptonic}{\HepProcess{\ttbar \to \bbbar\Pq\Pq\Plepton\Pnu}\xspace}
+\newcommand{\TTToLLNuNu}{\HepProcess{\ttbar \to \bbbar\Pbottom\Pleptonminus\Pleptonplus\APnu\Pnu}\xspace}
+
+% Single top
+\newcommand{\STschanToHadronic}{\HepProcess{\Ptop\Pbottom \to \bbbar\Pquark\Pquark}\xspace}
+\newcommand{\STschanToLeptonic}{\HepProcess{\Ptop\Pbottom \to \bbbar\Plepton\Pnu}\xspace}
+\newcommand{\STschanTopToLeptonic}{\HepProcess{\Ptop\APbottom \to \bbbar\Pleptonminus\APnu}\xspace}
+\newcommand{\STschanAntiTopToLeptonic}{\HepProcess{\APtop\Pbottom \to \bbbar\Pleptonplus\Pnu}\xspace}
+\newcommand{\STtchanTop}{\HepProcess{\Ptop\Pquark}\xspace}
+\newcommand{\STtchanTopToLeptonic}{\HepProcess{\Ptop\Pquark \to \Pbottom\Pquark\Pleptonplus\Pnu}\xspace}
+\newcommand{\STtchanAntiTop}{\HepProcess{\APtop\Pquark}\xspace}
+\newcommand{\STtchanAntiTopToLeptonic}{\HepProcess{\APtop\Pquark \to \APbottom\Pquark\Pleptonminus\APnu}\xspace}
+\newcommand{\STtWchanTop}{\HepProcess{\Ptop\PWminus}\xspace}
+\newcommand{\STtWchanAntiTop}{\HepProcess{\APtop\PWplus}\xspace}
+
+% W+Jets
+\newcommand{\WJetsToLNu}{\HepProcess{\PW \to \Plepton\Pnu}\xspace}
+
+% Diboson
+\newcommand{\WWToLNuQQ}{\HepProcess{\PW\PW \to \Plepton\Pnu\Pquark\Pquark}\xspace}
+\newcommand{\WWToQQQQ}{\HepProcess{\PW\PW \to \Pquark\Pquark\Pquark\Pquark}\xspace}
+\newcommand{\WWToLLNuNu}{\HepProcess{\PW\PW \to \Plepton\Plepton\Pnu\Pnu}\xspace}
+\newcommand{\WZToLNuQQ}{\HepProcess{\PW\PZ \to \Plepton\Pnu\Pquark\Pquark}\xspace}
+\newcommand{\WZToLNuNuNu}{\HepProcess{\PW\PZ \to \Plepton\Pnu\Pnu\Pnu}\xspace}
+\newcommand{\WZToLLQQ}{\HepProcess{\PW\PZ \to \Plepton\Plepton\Pquark\Pquark}\xspace}
+\newcommand{\WZToLLLNu}{\HepProcess{\PW\PZ \to \Plepton\Plepton\Plepton\Pnu}\xspace}
+\newcommand{\WZToQQNuNu}{\HepProcess{\PW\PZ \to \Pnu\Pnu \Pquark\Pquark}\xspace}
+\newcommand{\ZZToLLLL}{\HepProcess{\PZ\PZ \to \Plepton\Plepton\Plepton\Plepton}\xspace}
+\newcommand{\ZZToQQNuNu}{\HepProcess{\PZ\PZ \to \Pnu\Pnu\Pquark\Pquark}\xspace}
+\newcommand{\ZZToQQQQ}{\HepProcess{\PZ\PZ \to \Pquark\Pquark\Pquark\Pquark}\xspace}
+\newcommand{\ZZToLLQQ}{\HepProcess{\PZ\PZ \to \Plepton\Plepton\Pquark\Pquark}\xspace}
+\newcommand{\VVToLLNuNu}{\HepProcess{\VV \to \Plepton\Plepton\Pnu\Pnu}\xspace}
+
+% ttV
+\newcommand{\TTHToBB}{\HepProcess{\ttbar\PHiggs \to \Pbottom\Pbottom}\xspace}
+\newcommand{\TTHToNonBB}{\HepProcess{\ttbar\PHiggs \to \text{non-}\Pbottom\Pbottom}\xspace}
+\newcommand{\TTWJetsToLNu}{\HepProcess{\ttbar\PW \to \Plepton\Pnu}\xspace}
+\newcommand{\TTWJetsToQQ}{\HepProcess{\ttbar\PW \to \Pquark\Pquark}\xspace}
+\newcommand{\TTZToLLNuNu}{\HepProcess{\ttbar\PZ \to \Plepton\Plepton\Pnu\Pnu}\xspace}
+\newcommand{\TTZToQQ}{\HepProcess{\ttbar\PZ \to \Pquark\Pquark}\xspace}
+
+
+% Kinematic quantities
+\newcommand{\MLQ}{\ensuremath{M_{\LQ}}\xspace}
+\newcommand{\MZ}{\ensuremath{M_{\PZ}}\xspace}
+\newcommand{\ST}{\ensuremath{S_{\text{T}}}\xspace}
+\newcommand{\Muu}{\ensuremath{M_{\Pmu\Pmu}}\xspace}
+\newcommand{\Muujj}{\ensuremath{M_{\Pmu\Pmu\Pj\Pj}}\xspace}
+\newcommand{\MujOne}{\ensuremath{M_{\Pmu\Pj_1}}\xspace}
+\newcommand{\MujTwo}{\ensuremath{M_{\Pmu\Pj_2}}\xspace}
+\newcommand{\ptof}[1]{\ensuremath{\pt(#1)}\xspace}
+\newcommand{\Rspacial}{\ensuremath{R}\xspace}
+\newcommand{\DR}{\ensuremath{\Delta R}\xspace}
+\newcommand{\DRof}[2]{\ensuremath{\DR(#1,#2)}\xspace}
+\newcommand{\sqrts}{\ensuremath{\sqrt{s}}\xspace}
+\newcommand{\sqrtsTeV}[1]{\ensuremath{\sqrt{s} = \SI{#1}{\TeV}}\xspace}
+\newcommand{\pseudorap}{\ensuremath{\eta}\xspace}
+\newcommand{\abspseudorap}{\ensuremath{\abs{\eta}}\xspace}
+\newcommand{\mom}{\ensuremath{p}\xspace}
+\newcommand{\xsecTheory}{\ensuremath{\sigma_{\text{theory}}}\xspace}
+
+% Scale Factors
+\newcommand{\SF}[2]{\ensuremath{\text{SF}^{\text{#1}}_{\text{#2}}}\xspace}
+\newcommand{\RZ}{\ensuremath{R_{\PZ}}\xspace}
+\newcommand{\RTT}{\ensuremath{R_{\ttbar}}\xspace}
+\newcommand{\RVV}{\ensuremath{R_{\VV/\TTV}}\xspace}
+\newcommand{\Nevents}[1]{\ensuremath{N_{\text{#1}}}\xspace}
+\newcommand{\NCR}[2]{\ensuremath{N^{\text{#1}}_{\text{#2}}}\xspace}
+
+% HEM failure
+\newcommand{\RatioDataAB}{\ensuremath{\text{Data}^\text{B}/\text{Data}^\text{A}}\xspace}
+
 
 % Some software programs (alphabetized)
 \newcommand{\ACERMC} {\textsc{AcerMC}\xspace}
@@ -91,6 +206,7 @@
 \renewcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
 \renewcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
 \newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
+\renewcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
 \renewcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
 \renewcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
 \newcommand{\MeVns}{\ensuremath{\text{Me\hspace{-.08em}V}}\xspace} % no leading thinspace
@@ -171,8 +287,8 @@
 % Particle names which track the italic/non-italic face convention
 \newcommand{\zp}{{\PZpr}\xspace} % plain Z'
 \newcommand{\JPsi}{{\PJGy}\xspace} % J/Psi (no mass)
-\newcommand{\Z}{{\PZ}\xspace} % plain Z (no superscript 0)
-\newcommand{\ttbar}{{\PQt{}\PAQt}\xspace} % t-tbar
+%\newcommand{\Z}{{\PZ}\xspace} % plain Z (no superscript 0)
+%\newcommand{\ttbar}{{\PQt{}\PAQt}\xspace} % t-tbar
 
 % Extensions for missing names in PENNAMES % note now has xspace, to match syntax in PENNAMES2
 \newcommand{\cPgn}{\PGn} % generic neutrino
@@ -209,7 +325,7 @@
 \providecommand{\PGmpm}{\ensuremath{\PGm^\pm}\xspace}
 \providecommand{\PGmmp}{\ensuremath{\PGm^\mp}\xspace} % not available in pennames2, AFAIK
 \providecommand{\PGUPnS}{\PGUP{nS}\xspace}% maps to \PGUP[nS]
-\providecommand{\PV}{{\HepParticle{V}{}{}}\Xspace} % generic vector boson
+%\providecommand{\PV}{{\HepParticle{V}{}{}}\Xspace} % generic vector boson
 \providecommand{\Pell}{\HepParticle{\ell}{}{}\Xspace} % generic lepton (like \Pl, but using \ell)
 \providecommand{\PQQ}{\HepParticle{Q}{}{}\Xspace} % generic heavy quark
 \providecommand{\PAQQ}{\HepAntiParticle{Q}{}{}\Xspace} % generic heavy antiquark
@@ -231,7 +347,7 @@
 
 \newcommand{\BC}{\HepParticle{B}{c}{}{}\xspace}
 \newcommand{\bbarc}{\PAQb{}\PQc\xspace}
-\newcommand{\bbbar}{\PQb{}\PAQb\xspace}
+%\newcommand{\bbbar}{\PQb{}\PAQb\xspace}
 \newcommand{\ccbar}{\PQc{}\PAQc\xspace}
 \newcommand{\qqbar}{\ensuremath{\PQq\PAQq}\xspace}
 \newcommand{\bspsiphi}{\ensuremath{\PBs \to \JPsi\, \PGf}\xspace}
@@ -247,7 +363,7 @@
 \newcommand{\PPTOGAMJET}{\ensuremath{\Pp\Pp\to\PGg + \text{jet}}}
 % \newcommand{\MH}{\ensuremath{M_{\PH}}}
 \newcommand{\RNINE}{\ensuremath{R_\mathrm{9}}}
-\newcommand{\DR}{\ensuremath{\Delta R}}
+%\newcommand{\DR}{\ensuremath{\Delta R}}
 
 
 
@@ -371,204 +487,205 @@
 %Removed overbar
 %PgXz
 %
-\newcommand{\PAz}{\PSAz}
-\newcommand{\PDiz}{\PDzDoP{2420}}
-\newcommand{\PDstiiz}{\PDstzDtP{2460}}
-\newcommand{\PDstz}{\PDstzP{2010}}
-% \newcommand{\PHpm}{\PSHpm}
-\newcommand{\PJgy}{\PJGyP{1S}}
-\newcommand{\PKia}{\PKDoP{1400}}
-\newcommand{\PKii}{\PKDtP{1770}}
-\newcommand{\PKi}{\PKDoP{1270}}
-\newcommand{\PKsta}{\PKstP{1370}}
-\newcommand{\PKstb}{\PKstP{1680}}
-\newcommand{\PKstiii}{\PKstDTP{1780}}
-\newcommand{\PKstii}{\PKstDtP{1430}}
-\newcommand{\PKstiv}{\PKstDfP{2045}}
-\newcommand{\PKstz}{\PKstDzP{1430}}
-\newcommand{\PNa}{\HepParticleResonanceFormalFull{\PN}{}{}{1440}{}{}{P}{11}{}\xspace}
-\newcommand{\PNb}{\HepParticleResonanceFormalFull{\PN}{}{}{1520}{}{}{D}{13}{}\xspace}
-\newcommand{\PNc}{\HepParticleResonanceFormalFull{\PN}{}{}{1535}{}{}{S}{11}{}\xspace}
-\newcommand{\PNd}{\HepParticleResonanceFormalFull{\PN}{}{}{1650}{}{}{S}{11}{}\xspace}
-\newcommand{\PNe}{\HepParticleResonanceFormalFull{\PN}{}{}{1675}{}{}{D}{15}{}\xspace}
-\newcommand{\PNf}{\HepParticleResonanceFormalFull{\PN}{}{}{1680}{}{}{F}{15}{}\xspace}
-\newcommand{\PNg}{\HepParticleResonanceFormalFull{\PN}{}{}{1700}{}{}{D}{13}{}\xspace}
-\newcommand{\PNh}{\HepParticleResonanceFormalFull{\PN}{}{}{1710}{}{}{P}{11}{}\xspace}
-\newcommand{\PNi}{\HepParticleResonanceFormalFull{\PN}{}{}{1720}{}{}{P}{13}{}\xspace}
-\newcommand{\PNj}{\HepParticleResonanceFormalFull{\PN}{}{}{2190}{}{}{G}{17}{}\xspace}
-\newcommand{\PNk}{\HepParticleResonanceFormalFull{\PN}{}{}{2220}{}{}{H}{19}{}\xspace}
-\newcommand{\PNl}{\HepParticleResonanceFormalFull{\PN}{}{}{2250}{}{}{G}{19}{}\xspace}
-\newcommand{\PNm}{\HepParticleResonanceFormalFull{\PN}{}{}{2600}{}{}{I}{1,11}{}\xspace}
-\newcommand{\PSHz}{\HepParticle{\PSH}{}{0}{}}
-\newcommand{\PSgg}{\PSGg}
-\newcommand{\PSgm}{\PSGm}
-\newcommand{\PSgn}{\PSGn}
-\newcommand{\PSgt}{\PSGt}
-\newcommand{\PSgxpm}{\PSGcpm}
-\newcommand{\PSgxz}{\PSGcz}
-\newcommand{\PSq}{\PSQ}
-\newcommand{\PZgc}{\PZGc}
-\newcommand{\PZge}{\PZGe}
-\newcommand{\PZgy}{\PZGy}
-\newcommand{\PZi}{\HepParticle{Z}{1}{}\xspace}
-\newcommand{\PaBz}{\PABz}
-\newcommand{\PaB}{\PAB}
-\newcommand{\PaDz}{\PADz}
-\newcommand{\PaD}{\PAD}
-\newcommand{\PaKz}{\PAKz}
-\newcommand{\PaSq}{\PASQ}
-\newcommand{\PagL}{\PAGL}
-\newcommand{\PagOp}{\HepAntiParticle{\PGO}{}{+}\xspace}
-\newcommand{\PagSm}{\HepAntiParticle{\PGS}{}{-}\xspace}
-\newcommand{\PagSp}{\HepAntiParticle{\PGS}{}{+}\xspace}
-\newcommand{\PagSz}{\HepAntiParticle{\PGS}{}{0}\xspace}
-\newcommand{\PagXp}{\HepAntiParticle{\PGX}{}{+}\xspace}
-\newcommand{\PagXz}{\HepAntiParticle{\PGX}{}{0}\xspace}
-\newcommand{\Pagne}{\PAGne}
-\newcommand{\Pagngm}{\PAGnGm}
-\newcommand{\Pagngt}{\PAGnGt}
-\newcommand{\Paii}{\PaDtP{1320}}
-\newcommand{\Pai}{\PaDoP{1260}}
-\newcommand{\Pap}{\PAp}
-\newcommand{\Paqb}{\PAQqb}
-\newcommand{\Paqc}{\PAQqc}
-\newcommand{\Paqd}{\PAQqd}
-\newcommand{\Paqs}{\PAQqs}
-\newcommand{\Paqt}{\PAQqt}
-\newcommand{\Paqu}{\PAQqu}
-\newcommand{\Paq}{\PAQq}
-\newcommand{\Paz}{\PaDzP{980}}
-\newcommand{\Pbgcia}{\PGcbDoP{2P}}
-\newcommand{\Pbgciia}{\PGcbDtP{2P}}
-\newcommand{\Pbgcii}{\PGcbDtP{1P}}
-\newcommand{\Pbgci}{\PGcbDoP{1P}}
-\newcommand{\Pbgcza}{\PGcbDzP{2P}}
-\newcommand{\Pbgcz}{\PGcbDzP{1P}}
-\newcommand{\Pbi}{\PbDoP{1235}}
-\newcommand{\PcgLp}{\PGLpc}
-\newcommand{\PcgS}{\PGScP{2455}}
-\newcommand{\PcgXp}{\PGXpc}
-\newcommand{\PcgXz}{\PGXzc}
-\newcommand{\Pcgcii}{\PGccDtP{1P}}
-\newcommand{\Pcgci}{\PGccDoP{1P}}
-\newcommand{\Pcgcz}{\PGccDzP{1S}}
-\newcommand{\Pcgh}{\PGhcP{1S}}
-\newcommand{\Pfia}{\PfDoP{1390}}
-\newcommand{\Pfib}{\PfDoP{1510}}
-\newcommand{\Pfiia}{\PfDtP{1720}}
-\newcommand{\Pfiib}{\PfDtP{2010}}
-\newcommand{\Pfiic}{\PfDtP{2300}}
-\newcommand{\Pfiid}{\PfDtP{2340}}
-\newcommand{\Pfiipr}{\PfprDtP{1525}}
-\newcommand{\Pfii}{\PfDtP{1270}}
-\newcommand{\Pfiv}{\PfDfP{2050}}
-\newcommand{\Pfi}{\PfDoP{1285}}
-\newcommand{\Pfza}{\PfDzP{1400}}
-\newcommand{\Pfzb}{\PfDzP{1590}}
-\newcommand{\Pfz}{\PfDzP{975}}
-\newcommand{\PgD}{\PGD}
-\newcommand{\PgDa}{\HepParticleResonanceFormalFull{\PGD}{}{}{1232}{}{}{P}{33}{}\xspace}
-\newcommand{\PgDb}{\HepParticleResonanceFormalFull{\PGD}{}{}{1620}{}{}{S}{31}{}\xspace}
-\newcommand{\PgDc}{\HepParticleResonanceFormalFull{\PGD}{}{}{1700}{}{}{D}{33}{}\xspace}
-\newcommand{\PgDd}{\HepParticleResonanceFormalFull{\PGD}{}{}{1900}{}{}{S}{31}{}\xspace}
-\newcommand{\PgDe}{\HepParticleResonanceFormalFull{\PGD}{}{}{1905}{}{}{F}{35}{}\xspace}
-\newcommand{\PgDf}{\HepParticleResonanceFormalFull{\PGD}{}{}{1910}{}{}{P}{31}{}\xspace}
-\newcommand{\PgDh}{\HepParticleResonanceFormalFull{\PGD}{}{}{1920}{}{}{P}{33}{}\xspace}
-\newcommand{\PgDi}{\HepParticleResonanceFormalFull{\PGD}{}{}{1930}{}{}{D}{35}{}\xspace}
-\newcommand{\PgDj}{\HepParticleResonanceFormalFull{\PGD}{}{}{1950}{}{}{F}{37}{}\xspace}
-\newcommand{\PgDk}{\HepParticleResonanceFormalFull{\PGD}{}{}{2420}{}{}{H}{3,11}{}\xspace}
-\newcommand{\PgL}{\PGL}
-\newcommand{\PgLa}{\HepParticleResonanceFormalFull{\PGL}{}{}{1405}{}{}{S}{01}{}}
-\newcommand{\PgLb}{\HepParticleResonanceFormalFull{\PGL}{}{}{1520}{}{}{D}{03}{}}
-\newcommand{\PgLc}{\HepParticleResonanceFormalFull{\PGL}{}{}{1600}{}{}{P}{01}{}}
-\newcommand{\PgLd}{\HepParticleResonanceFormalFull{\PGL}{}{}{1670}{}{}{S}{01}{}}
-\newcommand{\PgLe}{\HepParticleResonanceFormalFull{\PGL}{}{}{1690}{}{}{D}{03}{}}
-\newcommand{\PgLf}{\HepParticleResonanceFormalFull{\PGL}{}{}{1800}{}{}{S}{01}{}}
-\newcommand{\PgLg}{\HepParticleResonanceFormalFull{\PGL}{}{}{1810}{}{}{P}{01}{}}
-\newcommand{\PgLh}{\HepParticleResonanceFormalFull{\PGL}{}{}{1820}{}{}{F}{05}{}}
-\newcommand{\PgLi}{\HepParticleResonanceFormalFull{\PGL}{}{}{1830}{}{}{D}{05}{}}
-\newcommand{\PgLj}{\HepParticleResonanceFormalFull{\PGL}{}{}{1890}{}{}{P}{03}{}}
-\newcommand{\PgLk}{\HepParticleResonanceFormalFull{\PGL}{}{}{2100}{}{}{G}{07}{}}
-\newcommand{\PgLl}{\HepParticleResonanceFormalFull{\PGL}{}{}{2110}{}{}{F}{05}{}}
-\newcommand{\PgLm}{\HepParticleResonanceFormalFull{\PGL}{}{}{2350}{}{}{H}{09}{}}
-\newcommand{\PgO}{\PGO}
-\newcommand{\PgOm}{\PGOm}
-\newcommand{\PgOma}{\PGOmP{2250}}
-\newcommand{\PgS}{\PGS}
-\newcommand{\PgSa}{\HepParticleResonanceFormalFull{\PGS}{}{}{1385}{}{}{P}{13}{}\xspace}
-\newcommand{\PgSb}{\HepParticleResonanceFormalFull{\PGS}{}{}{1660}{}{}{P}{11}{}\xspace}
-\newcommand{\PgSc}{\HepParticleResonanceFormalFull{\PGS}{}{}{1670}{}{}{D}{13}{}\xspace}
-\newcommand{\PgSd}{\HepParticleResonanceFormalFull{\PGS}{}{}{1750}{}{}{S}{11}{}\xspace}
-\newcommand{\PgSe}{\HepParticleResonanceFormalFull{\PGS}{}{}{1775}{}{}{D}{15}{}\xspace}
-\newcommand{\PgSf}{\HepParticleResonanceFormalFull{\PGS}{}{}{1915}{}{}{F}{15}{}\xspace}
-\newcommand{\PgSg}{\HepParticleResonanceFormalFull{\PGS}{}{}{1940}{}{}{D}{13}{}\xspace}
-\newcommand{\PgSh}{\HepParticleResonanceFormalFull{\PGS}{}{}{2030}{}{}{F}{17}{}\xspace}
-\newcommand{\PgSi}{\PGSP{2050}}
-\newcommand{\PgSm}{\PGSm}
-\newcommand{\PgSp}{\PGSp}
-\newcommand{\PgSz}{\PGSz}
-\newcommand{\PgU}{\PGU}
-\newcommand{\PgUa}{\PGUP{1S}}
-\newcommand{\PgUb}{\PGUP{2S}}
-\newcommand{\PgUc}{\PGUP{3S}}
-\newcommand{\PgUd}{\PGUP{4S}}
-\newcommand{\PgUe}{\PGUP{10860}}
-\newcommand{\PgUf}{\PGUP{11020}}
-\newcommand{\PgX}{\PGX}
-\newcommand{\PgXa}{\HepParticleResonanceFormalFull{\PGX}{}{}{1530}{}{}{P}{13}{}\xspace}
-\newcommand{\PgXb}{\PGXP{1690}}
-\newcommand{\PgXc}{\HepParticleResonanceFormalFull{\PGX}{}{}{1820}{}{}{D}{13}{}\xspace}
-\newcommand{\PgXd}{\PGXP{1950}}
-\newcommand{\PgXe}{\PGXP{2030}}
-\newcommand{\PgXm}{\PGXm}
-\newcommand{\PgXz}{\HepParticle{\PGX}{}{0}{}}
-\newcommand{\Pgfa}{\PGfP{1680}}
-\newcommand{\Pgfiii}{\PGfDTP{1850}}
-\newcommand{\Pgf}{\PGfP{1020}}
-\newcommand{\Pgg}{\PGg}
-\newcommand{\Pgha}{\PGhP{1295}}
-\newcommand{\Pghb}{\PGhP{1440}}
-\newcommand{\Pghpr}{\PGhprP{958}}
-\newcommand{\Pgh}{\PGh}
-\newcommand{\Pgmm}{\PGmm}
-\newcommand{\Pgmp}{\PGmp}
-\newcommand{\Pgm}{\PGm}
-\newcommand{\Pgne}{\PGne}
-\newcommand{\Pgngm}{\PGnGm}
-\newcommand{\Pgngt}{\PGnGt}
-\newcommand{\Pgoa}{\PGoP{1390}}
-\newcommand{\Pgob}{\PGoP{1600}}
-\newcommand{\Pgoiii}{\PGoDTP{1670}}
-\newcommand{\Pgo}{\PGoP{783}}
-\newcommand{\Pgpa}{\PGpP{1300}}
-\newcommand{\Pgpii}{\PGpDtP{1670}}
-\newcommand{\Pgpm}{\PGpm}
-\newcommand{\Pgppm}{\PGppm}
-\newcommand{\Pgpp}{\PGpp}
-\newcommand{\Pgpz}{\PGpz}
-\newcommand{\Pgp}{\PGp}
-\newcommand{\Pgra}{\PGrP{1450}}
-\newcommand{\Pgrb}{\PGrP{1700}}
-\newcommand{\Pgriii}{\PGrDTP{1690}}
-\newcommand{\Pgr}{\PGrP{770}}
-\newcommand{\Pgt}{\PGt}
-\newcommand{\Pgya}{\PGyP{3770}}
-\newcommand{\Pgyb}{\PGyP{4040}}
-\newcommand{\Pgyc}{\PGyP{4160}}
-\newcommand{\Pgyd}{\PGyP{4415}}
-\newcommand{\Pgy}{\PGyP{2S}}
-% \newcommand{\Phia}{\PhDoP{1170}}
-\newcommand{\Pqb}{\PQqb}
-\newcommand{\Pqc}{\PQqc}
-\newcommand{\Pqd}{\PQqd}
-\newcommand{\Pqs}{\PQqs}
-\newcommand{\Pqt}{\PQqt}
-\newcommand{\Pqu}{\PQqu}
-\newcommand{\Pq}{\PQq}
-\newcommand{\PsDipm}{\PDpmsDoP{2536}}
-\newcommand{\PsDm}{\PDms}
-\newcommand{\PsDp}{\PDps}
-\newcommand{\PsDst}{\HepParticle{\PD}{s}{\ast}\xspace}
-
-\newcommand{\ttgg}{\ensuremath{\tau\tau\gamma\gamma}\xspace}
-\newcommand{\wwgg}{\ensuremath{WW\gamma\gamma}\xspace}
+%\newcommand{\PAz}{\PSAz}
+%\newcommand{\PDiz}{\PDzDoP{2420}}
+%\newcommand{\PDstiiz}{\PDstzDtP{2460}}
+%\newcommand{\PDstz}{\PDstzP{2010}}
+%% \newcommand{\PHpm}{\PSHpm}
+%\newcommand{\PJgy}{\PJGyP{1S}}
+%\newcommand{\PKia}{\PKDoP{1400}}
+%\newcommand{\PKii}{\PKDtP{1770}}
+%\newcommand{\PKi}{\PKDoP{1270}}
+%\newcommand{\PKsta}{\PKstP{1370}}
+%\newcommand{\PKstb}{\PKstP{1680}}
+%\newcommand{\PKstiii}{\PKstDTP{1780}}
+%\newcommand{\PKstii}{\PKstDtP{1430}}
+%\newcommand{\PKstiv}{\PKstDfP{2045}}
+%\newcommand{\PKstz}{\PKstDzP{1430}}
+%\newcommand{\PNa}{\HepParticleResonanceFormalFull{\PN}{}{}{1440}{}{}{P}{11}{}\xspace}
+%\newcommand{\PNb}{\HepParticleResonanceFormalFull{\PN}{}{}{1520}{}{}{D}{13}{}\xspace}
+%\newcommand{\PNc}{\HepParticleResonanceFormalFull{\PN}{}{}{1535}{}{}{S}{11}{}\xspace}
+%\newcommand{\PNd}{\HepParticleResonanceFormalFull{\PN}{}{}{1650}{}{}{S}{11}{}\xspace}
+%\newcommand{\PNe}{\HepParticleResonanceFormalFull{\PN}{}{}{1675}{}{}{D}{15}{}\xspace}
+%\newcommand{\PNf}{\HepParticleResonanceFormalFull{\PN}{}{}{1680}{}{}{F}{15}{}\xspace}
+%\newcommand{\PNg}{\HepParticleResonanceFormalFull{\PN}{}{}{1700}{}{}{D}{13}{}\xspace}
+%\newcommand{\PNh}{\HepParticleResonanceFormalFull{\PN}{}{}{1710}{}{}{P}{11}{}\xspace}
+%\newcommand{\PNi}{\HepParticleResonanceFormalFull{\PN}{}{}{1720}{}{}{P}{13}{}\xspace}
+%\newcommand{\PNj}{\HepParticleResonanceFormalFull{\PN}{}{}{2190}{}{}{G}{17}{}\xspace}
+%\newcommand{\PNk}{\HepParticleResonanceFormalFull{\PN}{}{}{2220}{}{}{H}{19}{}\xspace}
+%\newcommand{\PNl}{\HepParticleResonanceFormalFull{\PN}{}{}{2250}{}{}{G}{19}{}\xspace}
+%\newcommand{\PNm}{\HepParticleResonanceFormalFull{\PN}{}{}{2600}{}{}{I}{1,11}{}\xspace}
+%\newcommand{\PSHz}{\HepParticle{\PSH}{}{0}{}}
+%\newcommand{\PSgg}{\PSGg}
+%\newcommand{\PSgm}{\PSGm}
+%\newcommand{\PSgn}{\PSGn}
+%\newcommand{\PSgt}{\PSGt}
+%\newcommand{\PSgxpm}{\PSGcpm}
+%\newcommand{\PSgxz}{\PSGcz}
+%\newcommand{\PSq}{\PSQ}
+%\newcommand{\PZgc}{\PZGc}
+%\newcommand{\PZge}{\PZGe}
+%\newcommand{\PZgy}{\PZGy}
+%\newcommand{\PZi}{\HepParticle{Z}{1}{}\xspace}
+%\newcommand{\PaBz}{\PABz}
+%\newcommand{\PaB}{\PAB}
+%\newcommand{\PaDz}{\PADz}
+%\newcommand{\PaD}{\PAD}
+%\newcommand{\PaKz}{\PAKz}
+%\newcommand{\PaSq}{\PASQ}
+%\newcommand{\PagL}{\PAGL}
+%\newcommand{\PagOp}{\HepAntiParticle{\PGO}{}{+}\xspace}
+%\newcommand{\PagSm}{\HepAntiParticle{\PGS}{}{-}\xspace}
+%\newcommand{\PagSp}{\HepAntiParticle{\PGS}{}{+}\xspace}
+%\newcommand{\PagSz}{\HepAntiParticle{\PGS}{}{0}\xspace}
+%\newcommand{\PagXp}{\HepAntiParticle{\PGX}{}{+}\xspace}
+%\newcommand{\PagXz}{\HepAntiParticle{\PGX}{}{0}\xspace}
+%\newcommand{\Pagne}{\PAGne}
+%\newcommand{\Pagngm}{\PAGnGm}
+%\newcommand{\Pagngt}{\PAGnGt}
+%\newcommand{\Paii}{\PaDtP{1320}}
+%\newcommand{\Pai}{\PaDoP{1260}}
+%\newcommand{\Pap}{\PAp}
+%\newcommand{\Paqb}{\PAQqb}
+%\newcommand{\Paqc}{\PAQqc}
+%\newcommand{\Paqd}{\PAQqd}
+%\newcommand{\Paqs}{\PAQqs}
+%\newcommand{\Paqt}{\PAQqt}
+%\newcommand{\Paqu}{\PAQqu}
+%\newcommand{\Paq}{\PAQq}
+%\newcommand{\Paz}{\PaDzP{980}}
+%\newcommand{\Pbgcia}{\PGcbDoP{2P}}
+%\newcommand{\Pbgciia}{\PGcbDtP{2P}}
+%\newcommand{\Pbgcii}{\PGcbDtP{1P}}
+%\newcommand{\Pbgci}{\PGcbDoP{1P}}
+%\newcommand{\Pbgcza}{\PGcbDzP{2P}}
+%\newcommand{\Pbgcz}{\PGcbDzP{1P}}
+%\newcommand{\Pbi}{\PbDoP{1235}}
+%\newcommand{\PcgLp}{\PGLpc}
+%\newcommand{\PcgS}{\PGScP{2455}}
+%\newcommand{\PcgXp}{\PGXpc}
+%\newcommand{\PcgXz}{\PGXzc}
+%\newcommand{\Pcgcii}{\PGccDtP{1P}}
+%\newcommand{\Pcgci}{\PGccDoP{1P}}
+%\newcommand{\Pcgcz}{\PGccDzP{1S}}
+%\newcommand{\Pcgh}{\PGhcP{1S}}
+%\newcommand{\Pfia}{\PfDoP{1390}}
+%\newcommand{\Pfib}{\PfDoP{1510}}
+%\newcommand{\Pfiia}{\PfDtP{1720}}
+%\newcommand{\Pfiib}{\PfDtP{2010}}
+%\newcommand{\Pfiic}{\PfDtP{2300}}
+%\newcommand{\Pfiid}{\PfDtP{2340}}
+%\newcommand{\Pfiipr}{\PfprDtP{1525}}
+%\newcommand{\Pfii}{\PfDtP{1270}}
+%\newcommand{\Pfiv}{\PfDfP{2050}}
+%\newcommand{\Pfi}{\PfDoP{1285}}
+%\newcommand{\Pfza}{\PfDzP{1400}}
+%\newcommand{\Pfzb}{\PfDzP{1590}}
+%\newcommand{\Pfz}{\PfDzP{975}}
+%\newcommand{\PgD}{\PGD}
+%\newcommand{\PgDa}{\HepParticleResonanceFormalFull{\PGD}{}{}{1232}{}{}{P}{33}{}\xspace}
+%\newcommand{\PgDb}{\HepParticleResonanceFormalFull{\PGD}{}{}{1620}{}{}{S}{31}{}\xspace}
+%\newcommand{\PgDc}{\HepParticleResonanceFormalFull{\PGD}{}{}{1700}{}{}{D}{33}{}\xspace}
+%\newcommand{\PgDd}{\HepParticleResonanceFormalFull{\PGD}{}{}{1900}{}{}{S}{31}{}\xspace}
+%\newcommand{\PgDe}{\HepParticleResonanceFormalFull{\PGD}{}{}{1905}{}{}{F}{35}{}\xspace}
+%\newcommand{\PgDf}{\HepParticleResonanceFormalFull{\PGD}{}{}{1910}{}{}{P}{31}{}\xspace}
+%\newcommand{\PgDh}{\HepParticleResonanceFormalFull{\PGD}{}{}{1920}{}{}{P}{33}{}\xspace}
+%\newcommand{\PgDi}{\HepParticleResonanceFormalFull{\PGD}{}{}{1930}{}{}{D}{35}{}\xspace}
+%\newcommand{\PgDj}{\HepParticleResonanceFormalFull{\PGD}{}{}{1950}{}{}{F}{37}{}\xspace}
+%\newcommand{\PgDk}{\HepParticleResonanceFormalFull{\PGD}{}{}{2420}{}{}{H}{3,11}{}\xspace}
+%\newcommand{\PgL}{\PGL}
+%\newcommand{\PgLa}{\HepParticleResonanceFormalFull{\PGL}{}{}{1405}{}{}{S}{01}{}}
+%\newcommand{\PgLb}{\HepParticleResonanceFormalFull{\PGL}{}{}{1520}{}{}{D}{03}{}}
+%\newcommand{\PgLc}{\HepParticleResonanceFormalFull{\PGL}{}{}{1600}{}{}{P}{01}{}}
+%\newcommand{\PgLd}{\HepParticleResonanceFormalFull{\PGL}{}{}{1670}{}{}{S}{01}{}}
+%\newcommand{\PgLe}{\HepParticleResonanceFormalFull{\PGL}{}{}{1690}{}{}{D}{03}{}}
+%\newcommand{\PgLf}{\HepParticleResonanceFormalFull{\PGL}{}{}{1800}{}{}{S}{01}{}}
+%\newcommand{\PgLg}{\HepParticleResonanceFormalFull{\PGL}{}{}{1810}{}{}{P}{01}{}}
+%\newcommand{\PgLh}{\HepParticleResonanceFormalFull{\PGL}{}{}{1820}{}{}{F}{05}{}}
+%\newcommand{\PgLi}{\HepParticleResonanceFormalFull{\PGL}{}{}{1830}{}{}{D}{05}{}}
+%\newcommand{\PgLj}{\HepParticleResonanceFormalFull{\PGL}{}{}{1890}{}{}{P}{03}{}}
+%\newcommand{\PgLk}{\HepParticleResonanceFormalFull{\PGL}{}{}{2100}{}{}{G}{07}{}}
+%\newcommand{\PgLl}{\HepParticleResonanceFormalFull{\PGL}{}{}{2110}{}{}{F}{05}{}}
+%\newcommand{\PgLm}{\HepParticleResonanceFormalFull{\PGL}{}{}{2350}{}{}{H}{09}{}}
+%\newcommand{\PgO}{\PGO}
+%\newcommand{\PgOm}{\PGOm}
+%\newcommand{\PgOma}{\PGOmP{2250}}
+%\newcommand{\PgS}{\PGS}
+%\newcommand{\PgSa}{\HepParticleResonanceFormalFull{\PGS}{}{}{1385}{}{}{P}{13}{}\xspace}
+%\newcommand{\PgSb}{\HepParticleResonanceFormalFull{\PGS}{}{}{1660}{}{}{P}{11}{}\xspace}
+%\newcommand{\PgSc}{\HepParticleResonanceFormalFull{\PGS}{}{}{1670}{}{}{D}{13}{}\xspace}
+%\newcommand{\PgSd}{\HepParticleResonanceFormalFull{\PGS}{}{}{1750}{}{}{S}{11}{}\xspace}
+%\newcommand{\PgSe}{\HepParticleResonanceFormalFull{\PGS}{}{}{1775}{}{}{D}{15}{}\xspace}
+%\newcommand{\PgSf}{\HepParticleResonanceFormalFull{\PGS}{}{}{1915}{}{}{F}{15}{}\xspace}
+%\newcommand{\PgSg}{\HepParticleResonanceFormalFull{\PGS}{}{}{1940}{}{}{D}{13}{}\xspace}
+%\newcommand{\PgSh}{\HepParticleResonanceFormalFull{\PGS}{}{}{2030}{}{}{F}{17}{}\xspace}
+%\newcommand{\PgSi}{\PGSP{2050}}
+%\newcommand{\PgSm}{\PGSm}
+%\newcommand{\PgSp}{\PGSp}
+%\newcommand{\PgSz}{\PGSz}
+%\newcommand{\PgU}{\PGU}
+%\newcommand{\PgUa}{\PGUP{1S}}
+%\newcommand{\PgUb}{\PGUP{2S}}
+%\newcommand{\PgUc}{\PGUP{3S}}
+%\newcommand{\PgUd}{\PGUP{4S}}
+%\newcommand{\PgUe}{\PGUP{10860}}
+%\newcommand{\PgUf}{\PGUP{11020}}
+%\newcommand{\PgX}{\PGX}
+%\newcommand{\PgXa}{\HepParticleResonanceFormalFull{\PGX}{}{}{1530}{}{}{P}{13}{}\xspace}
+%\newcommand{\PgXb}{\PGXP{1690}}
+%\newcommand{\PgXc}{\HepParticleResonanceFormalFull{\PGX}{}{}{1820}{}{}{D}{13}{}\xspace}
+%\newcommand{\PgXd}{\PGXP{1950}}
+%\newcommand{\PgXe}{\PGXP{2030}}
+%\newcommand{\PgXm}{\PGXm}
+%\newcommand{\PgXz}{\HepParticle{\PGX}{}{0}{}}
+%\newcommand{\Pgfa}{\PGfP{1680}}
+%\newcommand{\Pgfiii}{\PGfDTP{1850}}
+%\newcommand{\Pgf}{\PGfP{1020}}
+%\newcommand{\Pgg}{\PGg}
+%\newcommand{\Pgha}{\PGhP{1295}}
+%\newcommand{\Pghb}{\PGhP{1440}}
+%\newcommand{\Pghpr}{\PGhprP{958}}
+%\newcommand{\Pgh}{\PGh}
+%\newcommand{\Pgmm}{\PGmm}
+%\newcommand{\Pgmp}{\PGmp}
+%\newcommand{\Pgm}{\PGm}
+%\newcommand{\Pgne}{\PGne}
+%\newcommand{\Pgngm}{\PGnGm}
+%\newcommand{\Pgngt}{\PGnGt}
+%\newcommand{\Pgoa}{\PGoP{1390}}
+%\newcommand{\Pgob}{\PGoP{1600}}
+%\newcommand{\Pgoiii}{\PGoDTP{1670}}
+%\newcommand{\Pgo}{\PGoP{783}}
+%\newcommand{\Pgpa}{\PGpP{1300}}
+%\newcommand{\Pgpii}{\PGpDtP{1670}}
+%\newcommand{\Pgpm}{\PGpm}
+%\newcommand{\Pgppm}{\PGppm}
+%\newcommand{\Pgpp}{\PGpp}
+%\newcommand{\Pgpz}{\PGpz}
+%\newcommand{\Pgp}{\PGp}
+%\newcommand{\Pgra}{\PGrP{1450}}
+%\newcommand{\Pgrb}{\PGrP{1700}}
+%\newcommand{\Pgriii}{\PGrDTP{1690}}
+%\newcommand{\Pgr}{\PGrP{770}}
+%\newcommand{\Pgt}{\PGt}
+%\newcommand{\Pgya}{\PGyP{3770}}
+%\newcommand{\Pgyb}{\PGyP{4040}}
+%\newcommand{\Pgyc}{\PGyP{4160}}
+%\newcommand{\Pgyd}{\PGyP{4415}}
+%\newcommand{\Pgy}{\PGyP{2S}}
+%% \newcommand{\Phia}{\PhDoP{1170}}
+%\newcommand{\Pqb}{\PQqb}
+%\newcommand{\Pqc}{\PQqc}
+%\newcommand{\Pqd}{\PQqd}
+%\newcommand{\Pqs}{\PQqs}
+%\newcommand{\Pqt}{\PQqt}
+%\newcommand{\Pqu}{\PQqu}
+%\newcommand{\Pq}{\PQq}
+%\newcommand{\PsDipm}{\PDpmsDoP{2536}}
+%\newcommand{\PsDm}{\PDms}
+%\newcommand{\PsDp}{\PDps}
+%\newcommand{\PsDst}{\HepParticle{\PD}{s}{\ast}\xspace}
+%
+%\newcommand{\ttgg}{\ensuremath{\tau\tau\gamma\gamma}\xspace}
+%\newcommand{\wwgg}{\ensuremath{WW\gamma\gamma}\xspace}
+%

@@ -1,0 +1,180 @@
+Several SM processes are considered in this analysis as backgrounds. MC samples are used to estimate or cross-check the contribution from most of these processes:
+\begin{itemize}
+    \item \ZJETS events and \WJETS events generated with \MGvATNLO~\cite{MADGRAPH1,MADGRAPH2} in bins of boson \pt;
+    \item \TTJETS events, generated with \POWHEG~\cite{POWHEG}, inclusive for 2016 and decay binned for 2017 and 2018;
+    \item single top events, with t-channel and \Ptop\PW events generated with \PYTHIA and \POWHEG, and s-channel generated with \MGvATNLO;
+    \item \VV events, where each \PV is either a \PW or \PZ boson, generated at NLO with \MGvATNLO;
+    \item \TTV events, where \PV is either a \PW or \PZ boson generated at NLO with \MGvATNLO, or a Higgs boson generated at LO with \PYTHIA and \POWHEG.
+\end{itemize}
+
+As with the signal samples, all of the background samples are reconstructed using {CMSSW\_10\_2\_22} and simulate the detector response with \GEANTfour~\cite{GEANT4}. The SM background processes, datasets, and NLO cross sections at \SI{13}{\TeV} are listed for each year in Tables~\ref{tab:2016bgSamples}-\ref{tab:2018bgSamples}. Note that each cross section listed in Tables~\ref{tab:2016bgSamples}-\ref{tab:2018bgSamples} is the production cross section for inclusive decays and the product of the production cross section and decay branching fraction for samples with specific decay channels. Each SM background sample is normalized in each year of data-taking to the expected number of events, equivalent to the product of the cross section listed in Tables~\ref{tab:2016bgSamples}-\ref{tab:2018bgSamples} and the integrated luminosity, for a given year. For completeness, a LO mass-binned \ZJETS sample covering the range $\SI{10}{} < \MZ < \SI{50}{\GeV}$ was considered on top of the \pt-binned samples and ultimately deemed irrelevant; no events from the mass-binned sample passed preselection.
+
+\begin{table}[H]
+  \caption{The 2016 NanoAOD v7 dataset, cross-section, and number of events for each background sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+        \begin{tabular}{llc} \hline \hline
+            Process & DataSet & Cross Section (pb) \\ \hline
+            \DYJetsToLL & {DYJetsToLL\_Zpt-0To50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}    & 5352.57924 \\[-0.35em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-50To100\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}   & 363.81428 \\[-0.35em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 84.014804 \\[-0.35em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 3.22826 \\[-0.35em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 0.436041 \\[-0.35em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 0.040981 \\[-0.35em]
+            &&\\[-0.35em]
+            \ttbar & {TT\_TuneCUETP8M2T4\_13TeV-powheg-pythia8} & 831.76 \\ [-0.35em]
+            &&\\[-0.35em]
+            \STschanToLeptonic        & {ST\_s-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8\_TuneCUETP8M1}         & 3.38 \\[-0.35em]
+            \STtchanTopToLeptonic     & {ST\_t-channel\_top\_5f\_leptDecays\_TuneCUETP8M1\_13TeV-powhegV2-pythia8}      & 136.02 \\[-0.35em]
+            \STtchanAntiTopToLeptonic & {ST\_t-channel\_antitop\_5f\_leptDecays\_TuneCUETP8M1\_13TeV-powhegV2-pythia8}  & 80.95 \\[-0.35em]
+            \STtWchanTop              & {ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1}          & 35.85 \\[-0.35em]
+            \STtWchanAntiTop          & {ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1}      & 35.85 \\ [-0.35em]
+            &&\\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Wpt-0To50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}   & 57297.3926 \\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-50To100\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 3298.3733 \\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8} & 689.7496 \\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8} & 24.5069 \\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-400To600\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8} & 3.110131 \\[-0.35em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-600ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8} & 0.468318 \\ [-0.35em]
+            &&\\[-0.35em]
+            \WWToLNuQQ    & {WWTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}  & 49.997 \\[-0.35em]
+            \WWToQQQQ     & {WWTo4Q\_4f\_13TeV\_amcatnloFXFX\_madspin\_pythia8}   & 51.723 \\[-0.35em]
+            \WWToLLNuNu   & {WWTo2L2Nu\_13TeV-powheg}                             & 12.178 \\[-0.35em]
+            \WZToLNuQQ    & {WZTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}  & 10.71 \\[-0.35em]
+            \WZToLNuNuNu  & {WZTo1L3Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}    & 3.033 \\[-0.35em]
+            \WZToLLQQ     & {WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}     & 5.595 \\[-0.35em]
+            \WZToLLLNu    & {WZTo3LNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8}  & 4.42965 \\[-0.35em]
+            \WZToQQNuNu   & {WZTo2Q2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}    & 6.324 \\[-0.35em]
+            \ZZToLLLL     & {ZZTo4L\_13TeV-amcatnloFXFX-pythia8}                  & 1.212 \\[-0.35em]
+            \ZZToQQNuNu   & {ZZTo2Q2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}    & 4.04 \\[-0.35em]
+            \ZZToQQQQ     & {ZZTo4Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}       & 6.896587 \\[-0.35em]
+            \ZZToLLQQ     & {ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}     & 3.22 \\[-0.35em]
+            \VVToLLNuNu   & {VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}    & 11.95 \\ [-0.35em]
+            &&\\[-0.35em]
+            \TTHToBB      & {ttHTobb\_M125\_TuneCP5\_13TeV-powheg-pythia8}                   & 0.291 \\[-0.35em]
+            \TTHToNonBB   & {ttHToNonbb\_M125\_TuneCP5\_13TeV-powheg-pythia8}                & 0.213 \\[-0.35em]
+            \TTWJetsToLNu & {TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8} & 0.179 \\ [-0.35em]
+            \TTWJetsToQQ  & {TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8}  & 0.371 \\ [-0.35em]
+            \TTZToLLNuNu  & {TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8}        & 0.26 \\[-0.35em]
+            \TTZToQQ      & {TTZToQQ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8}                  & 0.60 \\ \hline\hline
+        \end{tabular}
+      \label{tab:2016bgSamples}
+    \end{scriptsize}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \caption{The 2017 NanoAOD v7 dataset, cross-section, and number of events for each background sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+        \begin{tabular}{llc} \hline \hline
+            Process & DataSet & Cross Section (pb) \\ \hline
+            \DYJetsToLL & {DYJetsToLL\_Zpt-0To50\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}     & 5352.57924 \\[-0.4em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-50To100\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}    & 363.81428 \\[-0.4em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-100To250\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 84.014804 \\[-0.4em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-250To400\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 3.22826 \\[-0.4em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-400To650\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 0.436041 \\[-0.4em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-650ToInf\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 0.040981 \\ [-0.4em]
+            &&\\[-0.4em]
+            \TTToHadronic     & {TTToHadronic\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}      & 377.96 \\ [-0.4em]
+            \TTToSemiLeptonic & {TTToSemiLeptonic\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}  & 365.34 \\ [-0.4em]
+            \TTToLLNuNu       & {TTTo2L2Nu\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}         & 87.31 \\ [-0.4em]
+            &&\\[-0.4em]
+            \STschanToHadronic  & {ST\_s-channel\_4f\_hadronicDecays\_TuneCP5\_13TeV-amcatnlo-pythia8}              & 10.32 \\[-0.4em]
+            \STschanToLeptonic  & {ST\_s-channel\_4f\_leptonDecays\_TuneCP5\_PSweights\_13TeV-amcatnlo-pythia8}     & - \\[-0.4em]
+            \STtchanTop         & {ST\_t-channel\_top\_5f\_TuneCP5\_13TeV-powheg-pythia8}                           & 136.02 \\[-0.4em]
+            \STtchanAntiTop     & {ST\_t-channel\_antitop\_5f\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}            & 80.95 \\[-0.4em]
+            \STtWchanTop        & {ST\_tW\_top\_5f\_inclusiveDecays\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}      & 35.85 \\[-0.4em]
+            \STtWchanAntiTop    & {ST\_tW\_antitop\_5f\_inclusiveDecays\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}  & 35.85 \\ [-0.4em]
+            &&\\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Wpt-0To50\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}    & 57297.39264 \\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-50To100\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 3298.3733 \\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-100To250\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 689.7496 \\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-250To400\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 24.5069 \\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-400To600\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 3.110131 \\[-0.4em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-600ToInf\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 0.468318 \\ [-0.4em]
+            &&\\[-0.4em]
+            \WWToLNuQQ    & {WWTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}            & 49.997 \\[-0.4em]
+            \WWToQQQQ     & {WWTo4Q\_NNPDF31\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}     & 51.723 \\[-0.4em]
+            \WWToLLNuNu   & {WWTo2L2Nu\_NNPDF31\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}  & 12.178 \\[-0.4em]
+            \WZToLNuQQ    & {WZTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}            & 10.71 \\[-0.4em]
+            \WZToLNuNuNu  & {WZTo1L3Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8\_v2}          & 3.033 \\[-0.4em]
+            \WZToLLQQ     & {WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}               & 5.595 \\[-0.4em]
+            \WZToLLLNu    & {WZTo3LNu\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}                 & 4.42965 \\[-0.4em]
+            \WZToQQNuNu   & {WZTo2Q2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}              & 6.324 \\[-0.4em]
+            \ZZToLLLL     & {ZZTo4L\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}                   & 1.212 \\[-0.4em]
+            \ZZToQQNuNu   & {ZZTo2Q2Nu\_TuneCP5\_13TeV\_amcatnloFXFX\_madspin\_pythia8}     & 4.04 \\[-0.4em]
+            %\ZZToQQQQ     & {ZZTo4Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}                 & 6.896587 \\[-0.4em]
+            \ZZToLLQQ     & {ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}               & 3.22 \\[-0.4em]
+            \VVToLLNuNu   & {VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}              & 11.95 \\ [-0.4em]
+            &&\\[-0.4em]
+            \TTHToBB      & {ttHTobb\_M125\_TuneCP5\_13TeV-powheg-pythia8}               & 0.291 \\[-0.4em]
+            \TTHToNonBB   & {ttHToNonbb\_M125\_TuneCP5\_13TeV-powheg-pythia8}            & 0.213 \\[-0.4em]
+            \TTWJetsToLNu & {TTWJetsToLNu\_TuneCP5\_13TeV-amcatnloFXFX-madspin-pythia8}  & 0.179 \\ [-0.4em]
+            \TTWJetsToQQ  & {TTWJetsToQQ\_TuneCP5\_13TeV-amcatnloFXFX-madspin-pythia8}   & 0.371 \\ [-0.4em]
+            \TTZToLLNuNu  & {TTZToLLNuNu\_M-10\_TuneCP5\_13TeV-amcatnlo-pythia8}         & 0.26 \\[-0.4em]
+            \TTZToQQ      & {TTZToQQ\_TuneCP5\_13TeV-amcatnlo-pythia8}                   & 0.60 \\ \hline\hline
+        \end{tabular}
+      \label{tab:2017bgSamples}
+    \end{scriptsize}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \caption{The 2018 NanoAOD v7 dataset, cross-section, and number of events for each background sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+        \begin{tabular}{llc} \hline \hline
+            Process & DataSet & Cross Section (pb) \\ \hline
+            \DYJetsToLL & {DYJetsToLL\_Zpt-0To50\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}     & 5352.57924 \\[-0.45em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-50To100\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}    & 363.81428 \\[-0.45em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-100To250\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 84.014804 \\[-0.45em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-250To400\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 3.22826 \\[-0.45em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-400To650\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 0.436041 \\[-0.45em]
+            \DYJetsToLL & {DYJetsToLL\_Pt-650ToInf\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 0.040981 \\ [-0.45em]
+            &&\\[-0.45em]
+            \TTToHadronic     & {TTToHadronic\_TuneCP5\_13TeV-powheg-pythia8}      & 377.96 \\ [-0.45em]
+            \TTToSemiLeptonic & {TTToSemiLeptonic\_TuneCP5\_13TeV-powheg-pythia8}  & 365.34 \\ [-0.45em]
+            \TTToLLNuNu       & {TTTo2L2Nu\_TuneCP5\_13TeV-powheg-pythia8}         & 87.31 \\ [-0.45em]
+            &&\\[-0.45em]
+            \STschanToHadronic        & {ST\_s-channel\_4f\_hadronicDecays\_TuneCP5\_13TeV-madgraph-pythia8}   & 10.32 \\[-0.45em]
+            \STschanToLeptonic        & {ST\_s-channel\_4f\_leptonDecays\_TuneCP5\_13TeV-amcatnlo-pythia8}     & - \\[-0.45em]
+            \STschanTopToLeptonic     & {ST\_s-channel\_top\_leptonDecays\_13TeV\_PSweights\_powheg-pythia}    & - \\[-0.45em]
+            \STschanAntiTopToLeptonic & {ST\_s-channel\_antitop\_leptonDecays\_13TeV-PSweights\_powheg-pythia} & - \\[-0.45em]
+            \STtchanTop               & {ST\_t-channel\_top\_4f\_TuneCP5\_13TeV-powheg-pythia8}                & 136.02 \\[-0.45em]
+            \STtchanAntiTop           & {ST\_t-channel\_antitop\_4f\_TuneCP5\_13TeV-powheg-pythia8}            & 80.95 \\[-0.45em]
+            \STtWchanTop              & {ST\_tW\_top\_5f\_inclusiveDecays\_TuneCP5\_13TeV-powheg-pythia8}      & 35.85 \\[-0.45em]
+            \STtWchanAntiTop          & {ST\_tW\_antitop\_5f\_inclusiveDecays\_TuneCP5\_13TeV-powheg-pythia8}  & 35.85 \\ [-0.45em]
+            &&\\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Wpt-0To50\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}    & 57297.39264 \\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-50To100\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}   & 3298.3733 \\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-100To250\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 689.7496 \\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-250To400\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 24.5069 \\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-400To600\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 3.110131 \\[-0.45em]
+            \WJetsToLNu & {WJetsToLNu\_Pt-600ToInf\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}  & 0.468318 \\ [-0.45em]
+            &&\\[-0.45em]
+            \WWToLNuQQ    & {WWTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}            & 49.997 \\[-0.45em]
+            \WWToQQQQ     & {WWTo4Q\_NNPDF31\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}     & 51.723 \\[-0.45em]
+            \WWToLLNuNu   & {WWTo2L2Nu\_NNPDF31\_TuneCP5\_PSweights\_13TeV-powheg-pythia8}  & 12.178 \\[-0.45em]
+            \WZToLNuQQ    & {WZTo1L1Nu2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}            & 10.71 \\[-0.45em]
+            \WZToLNuNuNu  & {WZTo1L3Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8\_v2}          & 3.033 \\[-0.45em]
+            \WZToLLQQ     & {WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}               & 5.595 \\[-0.45em]
+            \WZToLLLNu    & {WZTo3LNu\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}                 & 4.42965 \\[-0.45em]
+            \WZToQQNuNu   & {WZTo2Q2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}              & 6.324 \\[-0.45em]
+            \ZZToLLLL     & {ZZTo4L\_TuneCP5\_13TeV-amcatnloFXFX-pythia8}                   & 1.212 \\[-0.45em]
+            \ZZToQQNuNu   & {ZZTo2Q2Nu\_TuneCP5\_13TeV\_amcatnloFXFX\_madspin\_pythia8}     & 4.04 \\[-0.45em]
+            %\ZZToQQQQ     & {ZZTo4Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}                 & 6.896587 \\[-0.45em]
+            \ZZToLLQQ     & {ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}               & 3.22 \\[-0.45em]
+            \VVToLLNuNu   & {VVTo2L2Nu\_13TeV\_amcatnloFXFX\_madspin\_pythia8}              & 11.95 \\ [-0.45em]
+            &&\\[-0.45em]
+            \TTHToBB      & {ttHTobb\_M125\_TuneCP5\_13TeV-powheg-pythia8}               & 0.291 \\[-0.45em]
+            \TTHToNonBB   & {ttHToNonbb\_M125\_TuneCP5\_13TeV-powheg-pythia8}            & 0.213 \\[-0.45em]
+            \TTWJetsToLNu & {TTWJetsToLNu\_TuneCP5\_13TeV-amcatnloFXFX-madspin-pythia8}  & 0.179 \\ [-0.45em]
+            \TTWJetsToQQ  & {TTWJetsToQQ\_TuneCP5\_13TeV-amcatnloFXFX-madspin-pythia8}   & 0.371 \\ [-0.45em]
+            \TTZToLLNuNu  & {TTZToLLNuNu\_M-10\_TuneCP5\_13TeV-amcatnlo-pythia8}         & 0.26 \\[-0.45em]
+            \TTZToQQ      & {TTZToQQ\_TuneCP5\_13TeV-amcatnlo-pythia8}                   & 0.60 \\ \hline\hline
+        \end{tabular}
+      \label{tab:2018bgSamples}
+    \end{scriptsize}
+  \end{center}
+\end{table}

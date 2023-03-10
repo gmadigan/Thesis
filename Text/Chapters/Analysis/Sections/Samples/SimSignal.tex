@@ -1,0 +1,171 @@
+Leptoquark signal Monte Carlo (MC) samples are generated at leptoquark mass points ranging from 300 to \SI{3000}{\GeV} at intervals of \SI{100}{\GeV}, plus a \SI{3500}{\GeV} and \SI{4000}{\GeV} mass point. Cross sections and hard scattering are computed with \MGvATNLO and event generation uses the leading order (LO) \PYTHIA generator~\cite{PYTHIA,pythia8} (version 8.1). The parton distribution function (PDF) set used to generate leptoquark signal samples is NNPDF31 at LO. The tunes used for signal MC production vary by year, with 2016 using tune CUETP8M1, and both 2017 and 2018 using tune CP2. Additionally for 2016 signal MC, the PDFs are reweighted to NNPDF30 NLO, for consistency with the other background MC samples of the same year. Monte Carlo digitization and reconstruction is performed using {CMSSW\_10\_2\_22} and the simulation of the CMS detector is based on \GEANTfour~\cite{GEANT4}.
+
+The \LQToBMuPair samples considered are provided in Tables~\ref{tab:2016LQToBMuSamples}--\ref{tab:2018LQToBMuSamples} along with the datasets, the NLO cross sections at \SI{13}{\TeV}, and the total number of generated events. Each leptoquark signal sample is normalized in each year of data-taking to the expected number of signal events, equivalent to the product of the signal cross section listed in Tables~\ref{tab:2016LQToBMuSamples}--\ref{tab:2018LQToBMuSamples} and the integrated luminosity, for a given year. Table~\ref{tab:lqsamples} provides the NLO cross section used in generating each \LQToBMuPair sample at \SI{13}{\TeV}, as well as uncertainties on the NLO cross sections introduced by statisical uncertainty, factorization/renormalization scale uncertainty, and PDF uncertainty.
+
+\begin{table}[H]
+  \caption{The 2016 NanoAOD v7 dataset, cross section, and number of events for each leptoquark signal sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+      \begin{tabular}{lllc} \hline \hline
+        Process & Dataset & Cross Section (pb) & Events \\ \hline
+        \LQToBMuPair & {LQToBMu\_M-300\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 8.402           & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-400\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 1.813           & 49800 \\
+        \LQToBMuPair & {LQToBMu\_M-500\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 0.5010           & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-600\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 0.1706           & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-700\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 0.06449          & 48400 \\
+        \LQToBMuPair & {LQToBMu\_M-800\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 0.02680          & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-900\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}   & 0.01190          & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1000\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.005515         & 44600 \\
+        \LQToBMuPair & {LQToBMu\_M-1100\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.002696         & 47732 \\
+        \LQToBMuPair & {LQToBMu\_M-1200\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.001346         & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1300\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0006991        & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1400\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0003675        & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1500\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0001964        & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1600\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0001065        & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1700\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00005903       & 48800 \\
+        \LQToBMuPair & {LQToBMu\_M-1800\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00003288       & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-1900\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00001828       & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2000\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00001042       & 47600 \\
+        \LQToBMuPair & {LQToBMu\_M-2100\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.000005865      & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2200\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.000003286      & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2300\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.000001861      & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2400\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.000001060      & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2500\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0000006150     & 48600 \\
+        \LQToBMuPair & {LQToBMu\_M-2600\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0000003470     & 49400 \\
+        \LQToBMuPair & {LQToBMu\_M-2700\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0000001990     & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-2800\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0000001122     & 48400 \\
+        \LQToBMuPair & {LQToBMu\_M-2900\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00000006403    & 50000 \\
+        \LQToBMuPair & {LQToBMu\_M-3000\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.00000003698    & 48200 \\
+        \LQToBMuPair & {LQToBMu\_M-3500\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.000000002565   & 31600 \\
+        \LQToBMuPair & {LQToBMu\_M-4000\_pair\_TuneCUETP8M1\_13TeV-madgraph-pythia8}  & 0.0000000002426  & 47984 \\ \hline \hline
+      \end{tabular}
+    \end{scriptsize}
+    \label{tab:2016LQToBMuSamples}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \caption{The 2017 NanoAOD v7 dataset, cross section, and number of events for each leptoquark signal sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+      \begin{tabular}{lllc} \hline \hline
+        Process & Dataset & Cross Section (pb) & Events \\ \hline
+        \LQToBMuPair & {LQToBMu\_M-300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 8.402           & 49948 \\
+        \LQToBMuPair & {LQToBMu\_M-400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 1.813           & 49939 \\
+        \LQToBMuPair & {LQToBMu\_M-500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.5010           & 49130 \\
+        \LQToBMuPair & {LQToBMu\_M-600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.1706           & 49926 \\
+        \LQToBMuPair & {LQToBMu\_M-700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.06449          & 49921 \\
+        \LQToBMuPair & {LQToBMu\_M-800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.02680          & 49916 \\
+        \LQToBMuPair & {LQToBMu\_M-900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.01190          & 49911 \\
+        \LQToBMuPair & {LQToBMu\_M-1000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.005515         & 49908 \\
+        \LQToBMuPair & {LQToBMu\_M-1100\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.002696         & 49309 \\
+        \LQToBMuPair & {LQToBMu\_M-1200\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.001346         & 49904 \\
+        \LQToBMuPair & {LQToBMu\_M-1300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0006991        & 49902 \\
+        \LQToBMuPair & {LQToBMu\_M-1400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0003675        & 49895 \\
+        \LQToBMuPair & {LQToBMu\_M-1500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0001964        & 49892 \\
+        \LQToBMuPair & {LQToBMu\_M-1600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0001065        & 49888 \\
+        \LQToBMuPair & {LQToBMu\_M-1700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00005903       & 49890 \\
+        \LQToBMuPair & {LQToBMu\_M-1800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00003288       & 49884 \\
+        \LQToBMuPair & {LQToBMu\_M-1900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00001828       & 49884 \\
+        \LQToBMuPair & {LQToBMu\_M-2000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00001042       & 49879 \\
+        \LQToBMuPair & {LQToBMu\_M-2100\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000005865      & 49875 \\
+        \LQToBMuPair & {LQToBMu\_M-2200\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000003286      & 49875 \\
+        \LQToBMuPair & {LQToBMu\_M-2300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000001861      & 49873 \\
+        \LQToBMuPair & {LQToBMu\_M-2400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000001060      & 49875 \\
+        \LQToBMuPair & {LQToBMu\_M-2500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000006150     & 49872 \\
+        \LQToBMuPair & {LQToBMu\_M-2600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000003470     & 49864 \\
+        \LQToBMuPair & {LQToBMu\_M-2700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000001990     & 49867 \\
+        \LQToBMuPair & {LQToBMu\_M-2800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000001122     & 49862 \\
+        \LQToBMuPair & {LQToBMu\_M-2900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00000006403    & 49862 \\
+        \LQToBMuPair & {LQToBMu\_M-3000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00000003698    & 47869 \\
+        \LQToBMuPair & {LQToBMu\_M-3500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000000002565   & 49855 \\
+        \LQToBMuPair & {LQToBMu\_M-4000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000000002426  & 49856 \\ \hline \hline
+      \end{tabular}
+    \end{scriptsize}
+    \label{tab:2017LQToBMuSamples}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \caption{The 2018 NanoAOD v7 dataset, cross section, and number of events for each leptoquark signal sample used in the analysis.}
+  \begin{center}
+    \begin{scriptsize}
+      \begin{tabular}{lllc} \hline \hline
+        Process & Dataset & Cross Section (pb) & Events \\ \hline
+        \LQToBMuPair & {LQToBMu\_M-300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 8.402           & 49949 \\
+        \LQToBMuPair & {LQToBMu\_M-400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 1.813           & 49941 \\
+        \LQToBMuPair & {LQToBMu\_M-500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.5010           & 49931 \\
+        \LQToBMuPair & {LQToBMu\_M-600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.1706           & 49924 \\
+        \LQToBMuPair & {LQToBMu\_M-700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.06449          & 49919 \\
+        \LQToBMuPair & {LQToBMu\_M-800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.02680          & 49916 \\
+        \LQToBMuPair & {LQToBMu\_M-900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}   & 0.01190          & 49912 \\
+        \LQToBMuPair & {LQToBMu\_M-1000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.005515         & 49912 \\
+        \LQToBMuPair & {LQToBMu\_M-1100\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.002696         & 49900 \\
+        \LQToBMuPair & {LQToBMu\_M-1200\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.001346         & 49902 \\
+        \LQToBMuPair & {LQToBMu\_M-1300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0006991        & 49898 \\
+        \LQToBMuPair & {LQToBMu\_M-1400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0003675        & 49896 \\
+        \LQToBMuPair & {LQToBMu\_M-1500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0001964        & 49891 \\
+        \LQToBMuPair & {LQToBMu\_M-1600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0001065        & 49892 \\
+        \LQToBMuPair & {LQToBMu\_M-1700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00005903       & 49887 \\
+        \LQToBMuPair & {LQToBMu\_M-1800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00003288       & 49887 \\
+        \LQToBMuPair & {LQToBMu\_M-1900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00001828       & 49879 \\
+        \LQToBMuPair & {LQToBMu\_M-2000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00001042       & 49884 \\
+        \LQToBMuPair & {LQToBMu\_M-2100\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000005865      & 49876 \\
+        \LQToBMuPair & {LQToBMu\_M-2200\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000003286      & 49876 \\
+        \LQToBMuPair & {LQToBMu\_M-2300\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000001861      & 49877 \\
+        \LQToBMuPair & {LQToBMu\_M-2400\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000001060      & 49873 \\
+        \LQToBMuPair & {LQToBMu\_M-2500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000006150     & 49874 \\
+        \LQToBMuPair & {LQToBMu\_M-2600\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000003470     & 49868 \\
+        \LQToBMuPair & {LQToBMu\_M-2700\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000001990     & 49862 \\
+        \LQToBMuPair & {LQToBMu\_M-2800\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000001122     & 49868 \\
+        \LQToBMuPair & {LQToBMu\_M-2900\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00000006403    & 49866 \\
+        \LQToBMuPair & {LQToBMu\_M-3000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.00000003698    & 49862 \\
+        \LQToBMuPair & {LQToBMu\_M-3500\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.000000002565   & 49852 \\
+        \LQToBMuPair & {LQToBMu\_M-4000\_pair\_TuneCP2\_PSweights\_13TeV-madgraph-pythia8}  & 0.0000000002426  & 49859 \\ \hline \hline
+      \end{tabular}
+    \end{scriptsize}
+    \label{tab:2018LQToBMuSamples}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \caption{The leptoquark mass hypotheses used in the analysis, the corresponding NLO cross sections at \SI{13}{TeV}, percent variations on statistical uncertainty, PDF uncertainty, and systematic uncertainty with the renormalisation/factorisation scale varied between half and twice the leptoquark mass.}
+  \begin{center}
+    \begin{scriptsize}
+      \begin{tabular}{cccccc} \hline \hline
+        \MLQ [GeV] & $\sigma$(NLO) [pb] & $\delta$(stat) [\%] & $\delta$(scale up) [\%]  & $\delta$(scale down) [\%] & $\delta$(PDF up/down) [\%] \\ \hline
+        300   & \num{8.402}     & \num{5.7e-2}   & 12.2  & 12.7  & 3.4 \\
+        400   & \num{1.813}     & \num{1.3e-2}   & 11.6  & 12.7  & 4.1 \\
+        500   & \num{5.010e-1}  & \num{2.9e-3}   & 11.2  & 12.7  & 4.8 \\
+        600   & \num{1.706e-1}  & \num{9.8e-4}   & 11.7  & 13.1  & 5.5 \\
+        700   & \num{6.449e-2}  & \num{3.7e-4}   & 11.7  & 13.3  & 6.2 \\
+        800   & \num{2.680e-2}  & \num{1.5e-4}   & 11.6  & 13.4  & 6.8 \\
+        900   & \num{1.190e-2}  & \num{6.7e-5}   & 11.2  & 13.3  & 7.5 \\
+        1000  & \num{5.515e-3}  & \num{2.9e-5}   & 11.4  & 13.5  & 8.3 \\
+        1100  & \num{2.696e-3}  & \num{1.7e-5}   & 11.6  & 13.7  & 9.1 \\
+        1200  & \num{1.346e-3}  & \num{7.0e-6}   & 11.9  & 13.9  & 9.9 \\
+        1300  & \num{6.991e-4}  & \num{3.7e-6}   & 12.0  & 14.1  & 10.8 \\
+        1400  & \num{3.675e-4}  & \num{2.0e-6}   & 12.4  & 14.4  & 11.8 \\
+        1500  & \num{1.964e-4}  & \num{1.0e-6}   & 12.6  & 14.5  & 12.7 \\
+        1600  & \num{1.065e-4}  & \num{5.5e-7}   & 12.5  & 14.6  & 13.8 \\
+        1700  & \num{5.903e-5}  & \num{3.1e-7}   & 13.3  & 15.1  & 15.1 \\
+        1800  & \num{3.288e-5}  & \num{1.9e-7}   & 13.5  & 15.2  & 16.4 \\
+        1900  & \num{1.828e-5}  & \num{9.5e-8}   & 13.5  & 15.3  & 17.7 \\
+        2000  & \num{1.042e-5}  & \num{6.4e-8}   & 14.3  & 15.8  & 19.4 \\
+        2100  & \num{5.865e-6}  & \num{3.9e-8}   & 14.5  & 15.9  & 21.0 \\
+        2200  & \num{3.286e-6}  & \num{1.7e-8}   & 14.5  & 16.0  & 23.1 \\
+        2300  & \num{1.861e-6}  & \num{1.0e-8}   & 14.8  & 16.2  & 25.6 \\
+        2400  & \num{1.060e-6}  & \num{6.0e-9}   & 15.0  & 16.3  & 28.7 \\
+        2500  & \num{6.150e-7}  & \num{3.8e-9}   & 16.0  & 16.8  & 32.5 \\
+        2600  & \num{3.470e-7}  & \num{2.0e-9}   & 15.6  & 16.7  & 37.3 \\
+        2700  & \num{1.990e-7}  & \num{1.2e-9}   & 15.9  & 16.8  & 44.6 \\
+        2800  & \num{1.122e-7}  & \num{6.5e-10}  & 15.9  & 16.8  & 54.9 \\
+        2900  & \num{6.403e-8}  & \num{3.7e-10}  & 16.0  & 16.8  & 66.4 \\
+        3000  & \num{3.698e-8}  & \num{2.4e-10}  & 16.2  & 16.8  & 83.3 \\
+        3500  & \num{2.565e-9}  & \num{1.7e-11}  & 14.4  & 15.5  & 312.8 \\
+        4000  & \num{2.426e-10} & \num{1.2e-12}  & 13.4  & 14.8  & 3092.0 \\ \hline \hline
+      \end{tabular}
+    \end{scriptsize}
+    \label{tab:lqsamples}
+  \end{center}
+\end{table}

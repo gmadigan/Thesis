@@ -1,0 +1,12 @@
+Missing momentum in the transverse plane \ptvecmiss is reconstructed from the negative vector sum over all PF candidate momenta projected onto the plane orthogonal to the beam axis (i.e., the x-y plane). The magnitude of \ptvecmiss defines the missing transverse energy (MET) quantity \MET. Differences between PF and TuneP momenta assigned to muons are propogated to the MET calculation to maintain consistency with muons in this analysis. As recommended by the Jet/MET (JME) POG, a collection of filters stored in NanoAOD are further applied, listed here:
+
+\begin{itemize}
+    \item {goodVertices}
+    \item {GoodVertexCount} $\geq 1$
+    \item {HBHENoiseFilter}
+    \item {HBHENoiseIsoFilter}
+    \item {eeBadScFilter}
+    \item {EcalDeadCellTriggerPrimitiveFilter}
+    \item {globalSuperTightHalo2016Filter}
+    \item {BadPFMuonFilter}
+\end{itemize}

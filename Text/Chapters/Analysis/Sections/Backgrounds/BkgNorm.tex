@@ -1,0 +1,100 @@
+The \ZJETS, \ttbar, diboson, and \TTV processes are modeled via the same approach: MC simulation is used to first estimate the background shape, then the background is normalized to data at preselection with scale factors extracted inside a high sample purity CR. For \ZJETS, a \PZ-enriched CR in \Muu is used (the \PZ mass-pole), referred to as region A. The \ZJETS normalization scale factor is parameterized in bins of jet multiplicity. For \ttbar, a \ttbar-enriched CR in \Muu orthogonal to region A is used (the top quark kinematic turn-on), referred to as region B. Diboson and \TTV backgrounds are normalized simultaneously using the same CR, referred to as region C. Region C is defined by the same mass window as Region A, but inverts the veto on a third lepton into a requirement that there are at least three leptons (thus, orthogonal to regions A and B), and to retain sufficient statistics the b-jet tag requirement is dropped. Regions A, B, and C are orthogonal and the purity of each region was verified to be either \PZ-, \ttbar-, or \VV- and \TTV-enriched, respectively. The normalization scale factors \RZ, \RTT, and \RVV are defined by:
+
+\begin{equation}
+       \RZ = \frac{\NCR{A}{Data} - \RTT\NCR{A}{\ttbar} - \NCR{A}{\VV} - \NCR{A}{\TTV} - \NCR{A}{O}}{\NCR{A}{\PZ}},
+\end{equation}
+\begin{equation}
+       \RTT = \frac{\NCR{B}{Data} - \RZ\NCR{B}{\PZ} - \NCR{B}{\VV} - \NCR{B}{\TTV} - \NCR{B}{O}}{\NCR{B}{\ttbar}},
+\end{equation}
+and
+\begin{equation}
+       \RVV = \frac{\NCR{C}{Data} - \RZ\NCR{C}{\PZ} - \RTT\NCR{C}{\ttbar} - \NCR{C}{O}}{\NCR{C}{\VV} + \NCR{C}{\TTV}},
+\end{equation}
+
+where \Nevents{Data} is the number of data events, \Nevents{X} is the number of X-process SM background events, and \Nevents{O} is the number of events produced by ``other'' SM processes (i.e., single top and \WJETS), while the superscripts A, B, and C respectively denote the \PZ, \ttbar, and \VV/\TTV CRs from which these event counts are extracted. Due to the codependency of \RZ, \RTT, and \RVV, their values are initialized to unity, and the normalization factors are iteratively computed until the factors are stable. There is a strong dependence of the normalization scale factor in the \ZJETS background on the number of reconstructed jets, as seen in Fig.~\ref{fig:znjets}, so a jet-multiplicity-binned \ZJETS is used. The \ttbar background shows no such dependence. The scale factors and their uncertainties are listed for each year in Tables~\ref{tab:znormsf}-\ref{tab:vvnormsf}.
+
+\begin{figure}[H]
+       \centering
+       {\includegraphics[width=\textwidth]{Images/Analysis/mumuScaleFactors_JetCount.pdf}}
+       \caption{\ZJETS and \ttbar normalization scale factors, in full combined 2016-2018 dataset, binned in number of reconstructed jets}
+       \label{fig:znjets}
+\end{figure}
+
+\begin{table}[H]
+       \caption{\ZJETS normalization scale factors by year.}
+       \begin{center}
+              %\scriptsize
+              \begin{tabular}{ccccc}\hline\hline
+                    Year & Control Region A [GeV] & \PZ Purity & \RZ & Jet Count\\ \hline
+                    2016 & $80 < \Muu < 100$ & \SI{89}{\%} & $1.03 \pm 0.02$ \stat & 2\\
+                    2016 & $80 < \Muu < 100$ & \SI{89}{\%} & $0.95 \pm 0.03$ \stat & 3\\
+                    2016 & $80 < \Muu < 100$ & \SI{89}{\%} & $1.15 \pm 0.08$ \stat & 4\\
+                    2016 & $80 < \Muu < 100$ & \SI{89}{\%} & $1.47 \pm 0.16$ \stat & $\geq5$\\
+                    2017 & $80 < \Muu < 100$ & \SI{89}{\%} & $1.24 \pm 0.02$ \stat & 2\\
+                    2017 & $80 < \Muu < 100$ & \SI{89}{\%} & $1.50 \pm 0.04$ \stat & 3\\
+                    2017 & $80 < \Muu < 100$ & \SI{89}{\%} & $2.05 \pm 0.13$ \stat & 4\\
+                    2017 & $80 < \Muu < 100$ & \SI{89}{\%} & $2.82 \pm 0.35$ \stat & $\geq5$\\
+                    2018 & $80 < \Muu < 100$ & \SI{88}{\%} & $1.16 \pm 0.02$ \stat & 2\\ 
+                    2018 & $80 < \Muu < 100$ & \SI{88}{\%} & $1.44 \pm 0.04$ \stat & 3\\ 
+                    2018 & $80 < \Muu < 100$ & \SI{88}{\%} & $2.02 \pm 0.11$ \stat & 4\\ 
+                    2018 & $80 < \Muu < 100$ & \SI{88}{\%} & $2.80 \pm 0.34$ \stat & $\geq5$\\ \hline\hline
+              \end{tabular}
+              \label{tab:znormsf}
+       \end{center}
+\end{table}
+
+\begin{table}[H]
+       \caption{\ttbar normalization scale factors by year.}
+       \begin{center}
+              %\scriptsize
+              \begin{tabular}{cccc}\hline\hline
+                    Year & Control Region B [GeV] & \ttbar Purity & \RTT \\ \hline
+                    2016 & $100 < \Muu < 250$ & \SI{87}{\%} \% & $0.99 \pm 0.01$ \stat \\
+                    2017 & $100 < \Muu < 250$ & \SI{89}{\%} \% & $1.09 \pm 0.01$ \stat \\
+                    2018 & $100 < \Muu < 250$ & \SI{88}{\%} \% & $0.98 \pm 0.01$ \stat \\ \hline\hline
+              \end{tabular}
+              \label{tab:ttnormsf}
+       \end{center}
+\end{table}
+
+\begin{table}[H]
+       \caption{\VV and \TTV normalization scale factors by year.}
+       \begin{center}
+              %\scriptsize
+              \begin{tabular}{cccccc}\hline\hline
+                    Year & Control Region C [GeV] & Lepton Count & b-Jet Count & \VV + \TTV Purity & \RVV \\ \hline
+                    2016 & $80 < \Muu < 100$ & $\geq 3$ & $\geq 0$  & \SI{80}{\%} & $1.1 \pm 0.1$ \stat \\
+                    2017 & $80 < \Muu < 100$ & $\geq 3$ & $\geq 0$  & \SI{80}{\%} & $1.2 \pm 0.1$ \stat \\
+                    2018 & $80 < \Muu < 100$ & $\geq 3$ & $\geq 0$  & \SI{80}{\%} & $1.4 \pm 0.1$ \stat \\ \hline\hline
+              \end{tabular}
+              \label{tab:vvnormsf}
+       \end{center}
+\end{table}
+
+Studies on the stability of the background normalization scale factors can be found in Appendix~\ref{app:SFStudy}.
+
+Observed and expected \Muu distributions at preselection are shown in Figs.~\ref{figapp:preselmasszoom} and~\ref{figapp:preselmasszoomcombined} that are zoomed into the respective CRs. Two representative signal MC samples are shown as well, with the normalization described in Section~\ref{sec:SimSignal}.
+
+\begin{figure}[H]
+    \centering
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2016_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_ZRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2017_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_ZRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2018_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_ZRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2016_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_TTRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2017_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_TTRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2018_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_TTRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2016_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_VVRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2017_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_VVRegion.pdf}}
+    {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_2018_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_VVRegion.pdf}}
+    \caption{A comparison between observed data and SM expectation in \Muu distributions zoomed into the \ZJETS (top), \ttbar (middle), and \VV/\TTV (bottom) CRs at preselection level. Left to right: 2016, 2017, 2018 data. Error bars on observed data points represent statistical uncertainties, and systematic uncertainties on SM expectation are shown by gray hashing.}
+    \label{figapp:preselmasszoom}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_combined_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_ZRegion.pdf}}
+    {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_combined_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_TTRegion.pdf}}
+    {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_combined_Unblinded/Plots/Preselection/BasicLQ_uujj_M_uu_controlzoom_VVRegion.pdf}}
+    \caption{A comparison between observed data and SM expectation in \Muu distributions zoomed into the \ZJETS (top-left), \ttbar (top-right), and \VV/\TTV (bottom) CRs at preselection level with the combination of 2016, 2017, and 2018 data. Error bars on observed data points represent statistical uncertainties, and systematic uncertainties on SM expectation are shown by gray hashing.}
+    \label{figapp:preselmasszoomcombined}
+\end{figure}
