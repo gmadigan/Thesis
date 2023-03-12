@@ -32,8 +32,23 @@
 \newcommand{\LQ}{\HepParticle{LQ}{}{}\xspace}
 \newcommand{\LQbar}{\HepAntiParticle{LQ}{}{}\xspace}
 \newcommand{\LQToBMuPair}{\HepProcess{\LQ\LQbar \to \Pbottom\APbottom \Pmuon\APmuon}\xspace}
+\newcommand{\ppToLQLQ}{\HepProcess{\Pp\Pp \to \LQ\LQbar}\xspace}
+
+\newcommand{\MLQ}{\ensuremath{M_{\LQ}}\xspace}
+\newcommand{\lambdaLQ}{\ensuremath{\lambda_{\LQ}}\xspace}
+
+% LQ branching fractions to charged leptons vs neutrinos
+\newcommand{\bfu}{\ensuremath{\beta}\xspace}
+\newcommand{\bfv}{\ensuremath{1-\beta}\xspace}
+\newcommand{\bfuu}{\ensuremath{\beta^2}\xspace}
+\newcommand{\bfvv}{\ensuremath{(1-\beta)^2}\xspace}
+\newcommand{\bfuv}{\ensuremath{2\beta(1-\beta)}\xspace}
+
+
 
 % Final state particles/objects
+\renewcommand{\APlepton}{\ensuremath{\overline{\Plepton}}\xspace}
+
 \newcommand{\Pj}{\HepParticle{j}{}{}\xspace}
 \newcommand{\jet}{\HepParticle{jet}{}{}\xspace}
 \newcommand{\jets}{\HepParticle{jets}{}{}\xspace}
@@ -49,6 +64,7 @@
 
 \newcommand{\mumubj}{\HepProcess{\Pmu\Pmu\Pbottom\Pj}\xspace}
 \newcommand{\mumubb}{\HepProcess{\Pmu\Pmu\Pbottom\Pbottom}\xspace}
+\newcommand{\mumujj}{\HepProcess{\Pmu\Pmu\Pj\Pj}\xspace}
 
 % Background particles/processes
 \newcommand{\PV}{\HepParticle{V}{}{}\xspace}
@@ -110,7 +126,6 @@
 
 
 % Kinematic quantities
-\newcommand{\MLQ}{\ensuremath{M_{\LQ}}\xspace}
 \newcommand{\MZ}{\ensuremath{M_{\PZ}}\xspace}
 \newcommand{\ST}{\ensuremath{S_{\text{T}}}\xspace}
 \newcommand{\Muu}{\ensuremath{M_{\Pmu\Pmu}}\xspace}
@@ -126,7 +141,11 @@
 \newcommand{\pseudorap}{\ensuremath{\eta}\xspace}
 \newcommand{\abspseudorap}{\ensuremath{\abs{\eta}}\xspace}
 \newcommand{\mom}{\ensuremath{p}\xspace}
-\newcommand{\xsecTheory}{\ensuremath{\sigma_{\text{theory}}}\xspace}
+\newcommand{\xsec}{\ensuremath{\sigma}\xspace}
+\newcommand{\xsecSS}[1]{\ensuremath{\sigma_{\text{#1}}}\xspace}
+\newcommand{\ct}{\ensuremath{c\tau}\xspace}
+
+
 
 % Scale Factors
 \newcommand{\SF}[2]{\ensuremath{\text{SF}^{\text{#1}}_{\text{#2}}}\xspace}
@@ -201,38 +220,38 @@
 \newcommand{\de}{\ensuremath{^\circ}}
 \newcommand{\ten}[1]{\ensuremath{\times \text{10}^\text{#1}}}
 \newcommand{\unit}[1]{\ensuremath{\text{\,#1}}\xspace}
-\newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
-\newcommand{\micron}{\ensuremath{\,\mu\text{m}}\xspace}
-\renewcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
-\renewcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
-\newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
-\renewcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
-\renewcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
-\renewcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
-\newcommand{\MeVns}{\ensuremath{\text{Me\hspace{-.08em}V}}\xspace} % no leading thinspace
-\renewcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
-\newcommand{\GeVns}{\ensuremath{\text{Ge\hspace{-.08em}V}}\xspace} % no leading thinspace
-\newcommand{\gev}{\GeV}
-\renewcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
-\newcommand{\TeVns}{\ensuremath{\text{Te\hspace{-.08em}V}}\xspace} % no leading thinspace
-\newcommand{\PeV}{\ensuremath{\,\text{Pe\hspace{-.08em}V}}\xspace}
-\newcommand{\keVc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
-\newcommand{\MeVc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
-\newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
-\newcommand{\GeVcns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace} % no leading thinspace
-\newcommand{\TeVc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
-\newcommand{\keVcc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
-\newcommand{\MeVcc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
-\newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
-\newcommand{\GeVccns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace} % no leading thinspace
-\newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+%\newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
+%\newcommand{\micron}{\ensuremath{\,\mu\text{m}}\xspace}
+%\renewcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
+%\renewcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
+%\newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
+%\renewcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
+%\renewcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
+%\renewcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
+%\newcommand{\MeVns}{\ensuremath{\text{Me\hspace{-.08em}V}}\xspace} % no leading thinspace
+%\renewcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+%\newcommand{\GeVns}{\ensuremath{\text{Ge\hspace{-.08em}V}}\xspace} % no leading thinspace
+%\newcommand{\gev}{\GeV}
+%\renewcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+%\newcommand{\TeVns}{\ensuremath{\text{Te\hspace{-.08em}V}}\xspace} % no leading thinspace
+%\newcommand{\PeV}{\ensuremath{\,\text{Pe\hspace{-.08em}V}}\xspace}
+%\newcommand{\keVc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+%\newcommand{\MeVc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+%\newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+%\newcommand{\GeVcns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace} % no leading thinspace
+%\newcommand{\TeVc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+%\newcommand{\keVcc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+%\newcommand{\MeVcc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+%\newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+%\newcommand{\GeVccns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace} % no leading thinspace
+%\newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
 
-\newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
-\newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
-\newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^{-1}}}\xspace}
-\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^{-1}}}\xspace}
-\newcommand{\mubinv} {\ensuremath{\,\mu\text{b}^{-1}}\xspace}
-\newcommand{\mbinv} {\ensuremath{\,\text{mb}^{-1}}\xspace}
+%\newcommand{\abinv} {\mbox{\ensuremath{\,\text{ab}^{-1}}}\xspace}
+%\newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^{-1}}}\xspace}
+%\newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^{-1}}}\xspace}
+%\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^{-1}}}\xspace}
+%\newcommand{\mubinv} {\ensuremath{\,\mu\text{b}^{-1}}\xspace}
+%\newcommand{\mbinv} {\ensuremath{\,\text{mb}^{-1}}\xspace}
 \newcommand{\percms}{\ensuremath{\,\text{cm}^{-2}\,\text{s}^{-1}}\xspace}
 \newcommand{\lumi}{\ensuremath{\mathcal{L}}\xspace}
 \newcommand{\Lumi}{\ensuremath{\mathcal{L}}\xspace}%both upper and lower

@@ -30,10 +30,12 @@
 \usepackage{hyperref}
 %\usepackage{natbib}
 %\setcitestyle{square, numbers,sort&compress}
-\usepackage{hepnicenames} % Intuitive names for particles as commands
+\usepackage{hepnicenames} % Intuitive names for particles
+\usepackage{hepunits} % Extends SIunit package to hep-specific units
+\sisetup{free-standing-units=true}
 \usepackage{caption}
 %\usepackage{subcaption} % Incompatable with subfig (line 25)
-\usepackage[detect-all]{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+%\usepackage[detect-all]{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage{titlesec}
 \usepackage{braket}
