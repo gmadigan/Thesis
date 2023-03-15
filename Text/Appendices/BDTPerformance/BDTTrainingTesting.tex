@@ -9,7 +9,7 @@ A collection of 11 kinematic variables were selected as inputs to the BDT traini
     \item Combined momenta: \ST, \MET
     \item Spatial separation between the dimuon pair and the leading-\pt jet: \DRof{\PmuOne+\PmuTwo}{\PjOne}
 \end{itemize}
-Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution of each variable in background and signal events. Linear correlations (Figs.~\ref{figapp:correlationsBkg1}--\ref{figapp:correlationsSig2}) between variables were studied alongside variable rankings to avoid including highly-correlated but low-ranking variables, which introduces information redundancy. A common risk when using Gradient Boost is overtraining, where the BDT is optimized to bias in the training samples, degrading its performance. To check for overtraining, the BDT response was compared between training and testing data using the Kolmogorov-Smirnov test; no overfitting was observed. Optimal performance of each BDT was verified by checking the area under the Receiver Operating Characteristic (ROC) curve, which plots background rejection vs. signal efficiency, shown in Figs.~\ref{figapp:roc1}--\ref{figapp:roc2}. Figures~\ref{figapp:overtraining1}--\ref{figapp:overtraining2} show the BDT response in training and testing data and the corresponding ROC curves.
+Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution of each variable in background and signal events. Linear correlations (Figs.~\ref{figapp:correlationsBkg1}--\ref{figapp:correlationsSig3}) between variables were studied alongside variable rankings to avoid including highly-correlated but low-ranking variables, which introduces information redundancy. A common risk when using Gradient Boost is overtraining, where the BDT is optimized to bias in the training samples, degrading its performance. To check for overtraining, the BDT response was compared between training and testing data using the Kolmogorov-Smirnov test; no overfitting was observed. Optimal performance of each BDT was verified by checking the area under the Receiver Operating Characteristic (ROC) curve, which plots background rejection vs. signal efficiency, shown in Figs.~\ref{figapp:roc1}--\ref{figapp:roc2}. Figures~\ref{figapp:overtraining1}--\ref{figapp:overtraining2} show the BDT response in training and testing data and the corresponding ROC curves.
 
 \begin{figure}[H]
     \centering
@@ -23,7 +23,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/600/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/700/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/700/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{300}{700}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and signal events in the BDT input variables corresponding to BDT trainings on 300 to \SI{700}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables1}
 \end{figure}
 
@@ -39,7 +39,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1100/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1200/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1200/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{800}{1200}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and signal events in the BDT input variables corresponding to BDT trainings on 800 to \SI{1200}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables2}
 \end{figure}
 
@@ -55,7 +55,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{1300}{1700}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and signal events in the BDT input variables corresponding to BDT trainings on 1300 to \SI{1700}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables3}
 \end{figure}
 
@@ -71,7 +71,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2100/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2200/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2200/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{1800}{2200}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and events in the BDT input variables corresponding to BDT trainings on 1800 to \SI{2200}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables4}
 \end{figure}
 
@@ -87,7 +87,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2600/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2700/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2700/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{2300}{2700}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and signal events in the BDT input variables corresponding to BDT trainings on 2300 to \SI{2700}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables5}
 \end{figure}
 
@@ -103,7 +103,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3500/variables_id_c2.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/variables_id_c1.png}}
     {\includegraphics[width=.49\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/variables_id_c2.png}}
-    \caption{A comparison between background and $\MLQ = \SIrange{2800}{4000}{GeV}$ signal events in the BDT input variables. Signal events are solid blue while background events are hashed red.}
+    \caption{A comparison between background and signal events in the BDT input variables corresponding to BDT trainings on 2800 to \SI{4000}{GeV} leptoquark signal samples. Signal events are solid blue while background events are hashed red.}
     \label{figapp:variables6}
 \end{figure}
 
@@ -121,15 +121,15 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1200/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1300/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1400/CorrelationMatrixB.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/CorrelationMatrixB.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/CorrelationMatrixB.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/CorrelationMatrixB.png}}
-    \caption{The linear correlation matricies corresponding to $\MLQ = \SIrange{300}{1700}{GeV}$ BDTs in background events.}
+    \caption{The linear correlation matricies of BDT input variables in background events corresponding to BDT trainings on 300 to \SI{1400}{GeV} leptoquark signal samples.}
     \label{figapp:correlationsBkg1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/CorrelationMatrixB.png}}
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/CorrelationMatrixB.png}}
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1800/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1900/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2000/CorrelationMatrixB.png}}
@@ -139,14 +139,20 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2400/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2500/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2600/CorrelationMatrixB.png}}
+    \caption{The linear correlation matricies of BDT input variables in background events corresponding to BDT trainings on 1500 to \SI{2600}{GeV} leptoquark signal samples.}
+    \label{figapp:correlationsBkg2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2700/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2800/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2900/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3000/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3500/CorrelationMatrixB.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/CorrelationMatrixB.png}}
-    \caption{The linear correlation matricies corresponding to $\MLQ = \SIrange{1800}{4000}{GeV}$ BDTs in background events.}
-    \label{figapp:correlationsBkg2}
+    \caption{The linear correlation matricies of BDT input variables in background events corresponding to BDT trainings on 2700 to \SI{4000}{GeV} leptoquark signal samples.}
+    \label{figapp:correlationsBkg3}
 \end{figure}
 
 \begin{figure}[H]
@@ -163,15 +169,15 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1200/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1300/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1400/CorrelationMatrixS.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/CorrelationMatrixS.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/CorrelationMatrixS.png}}
-    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/CorrelationMatrixS.png}}
-    \caption{The linear correlation matricies corresponding to $\MLQ = \SIrange{300}{1700}{GeV}$ BDTs in signal events.}
+    \caption{The linear correlation matricies of BDT input variables in signal events corresponding to BDT trainings on 300 to \SI{1400}{GeV} leptoquark signal samples.}
     \label{figapp:correlationsSig1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/CorrelationMatrixS.png}}
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/CorrelationMatrixS.png}}
+    {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1800/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1900/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2000/CorrelationMatrixS.png}}
@@ -181,14 +187,20 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2400/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2500/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2600/CorrelationMatrixS.png}}
+    \caption{The linear correlation matricies of BDT input variables in signal events corresponding to BDT trainings on 1500 to \SI{2600}{GeV} leptoquark signal samples.}
+    \label{figapp:correlationsSig2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2700/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2800/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/2900/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3000/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3500/CorrelationMatrixS.png}}
     {\includegraphics[width=.30\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/CorrelationMatrixS.png}}
-    \caption{The linear correlation matricies corresponding to $\MLQ = \SIrange{1800}{4000}{GeV}$ BDTs in signal events.}
-    \label{figapp:correlationsSig2}
+    \caption{The linear correlation matricies of BDT input variables in signal events corresponding to BDT trainings on 2700 to \SI{4000}{GeV} leptoquark signal samples.}
+    \label{figapp:correlationsSig3}
 \end{figure}
 
 \begin{figure}[H]
@@ -208,7 +220,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/overtrain_BDTG.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/overtrain_BDTG.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/overtrain_BDTG.png}}
-    \caption{The BDT responses in training and testing events corresponding to $\MLQ = \SIrange{300}{1700}{GeV}$ signal samples. In training, signal events are blue markers while background events are red markers (vertical bars are statistical uncertainties); in testing, signal events are the solid blue histogram while background events are the hashed red histogram.}
+    \caption{The BDT responses in training and testing samples corresponding to BDT trainings on 300 to \SI{1700}{GeV} leptoquark signal samples. In training, signal events are blue markers while background events are red markers (vertical bars are statistical uncertainties); in testing, signal events are the solid blue histogram while background events are the hashed red histogram.}
     \label{figapp:overtraining1}
 \end{figure}
 
@@ -229,7 +241,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3000/overtrain_BDTG.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3500/overtrain_BDTG.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/overtrain_BDTG.png}}
-    \caption{The BDT responses in training and testing events corresponding to $\MLQ = \SIrange{1800}{4000}{GeV}$ signal samples. In training, signal events are blue markers while background events are red markers (vertical bars are statistical uncertainties); in testing, signal events are the solid blue histogram while background events are the hashed red histogram.}
+    \caption{The BDT responses in training and testing samples corresponding to BDT trainings on 1800 to \SI{4000}{GeV} leptoquark signal samples. In training, signal events are blue markers while background events are red markers (vertical bars are statistical uncertainties); in testing, signal events are the solid blue histogram while background events are the hashed red histogram.}
     \label{figapp:overtraining2}
 \end{figure}
 
@@ -250,7 +262,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1500/rejBvsS.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1600/rejBvsS.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/1700/rejBvsS.png}}
-    \caption{The ROC curves corresponding to $\MLQ = \SIrange{300}{1700}{GeV}$ signal samples.}
+    \caption{The ROC curves corresponding to BDT trainings on 300 to \SI{1700}{GeV} leptoquark signal samples.}
     \label{figapp:roc1}
 \end{figure}
 
@@ -271,7 +283,7 @@ Figures~\ref{figapp:variables1}--\ref{figapp:variables6} show the distribution o
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3000/rejBvsS.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/3500/rejBvsS.png}}
     {\includegraphics[width=.32\textwidth]{Images/Analysis/Results_LQToBMu_pair_uubj_BDTG_FullRun2_2023_01_25_020318/4000/rejBvsS.png}}
-    \caption{The ROC curves corresponding to $\MLQ = \SIrange{1800}{4000}{GeV}$ signal samples.}
+    \caption{The ROC curves corresponding to BDT trainings on 1800 to \SI{4000}{GeV} leptoquark signal samples.}
     \label{figapp:roc2}
 \end{figure}
 
