@@ -1,12 +1,12 @@
-Missing momentum in the transverse plane \ptvecmiss is reconstructed from the negative vector sum over all PF candidate momenta projected onto the plane orthogonal to the beam axis (i.e., the x-y plane). The magnitude of \ptvecmiss defines the missing transverse energy (MET) quantity \MET. Differences between PF and TuneP momenta assigned to muons are propogated to the MET calculation to maintain consistency with muons in this analysis. As recommended by the Jet/MET (JME) POG, a collection of filters stored in NanoAOD are further applied, listed here:
+Missing momentum in the transverse plane \ptvecmiss is reconstructed from the negative vector sum over all PF candidate momenta projected onto the plane orthogonal to the beam axis (i.e., the x-y plane). The magnitude of \ptvecmiss defines the missing transverse energy (MET) quantity \MET. Differences between PF and TuneP momenta assigned to muons are propogated to the MET calculation to maintain consistency with muons in this analysis. While large MET measurements are intended to detect invisible particles like neutrinos or exotic particles like Dark Matter, the majority of large MET in the detector stems from undesired sources such as cosmic rays, detector noise, and beam-halo particles that can result in ``fake'' or ``anomalous'' MET. As recommended by the Jet/MET (JME) POG, a collection of filters stored in NanoAOD are applied to suppress anomalous MET, listed here along with a brief discription of each filter:
 
 \begin{itemize}
-    \item {goodVertices}
-    \item {GoodVertexCount} $\geq 1$
-    \item {HBHENoiseFilter}
-    \item {HBHENoiseIsoFilter}
-    \item {eeBadScFilter}
-    \item {EcalDeadCellTriggerPrimitiveFilter}
-    \item {globalSuperTightHalo2016Filter}
-    \item {BadPFMuonFilter}
+    \item {goodVertices} -- Selects events with only good quality vertecies.
+    \item {GoodVertexCount} $\geq 1$ -- Ensures at least one good quality vertex per event.
+    \item {HBHENoiseFilter} -- Reduce the fixed rate of sporadic anomalous signal spikes in the HB and HE with dedicated algorithms to build noise cluster candidates using pulse chapes, geometric patterns, and channel multiplicities.
+    \item {HBHENoiseIsoFilter} -- Similar filter to HBHENoiseFilter while additionally considering neighboring activity in ECAL, HCAL, and the tracker.
+    \item {eeBadScFilter} -- Topological filter to remove EB crystal spikes with the ``Swiss-cross'' method; suppress anomalous energy sharing of high energy signal with neighboring crystals.
+    \item {EcalDeadCellTriggerPrimitiveFilter} -- Varies the ECAL trigger primitive momentum thresholds to filter out oversaturated channels.
+    \item {globalSuperTightHalo2016Filter} -- Remove beam halo effects by building halo cluster candidates (using halo deposit shape) in each calorimeter, then check if it can be matched to a CSC flat segment and has a pattern characteristic of interacting halo muons (out of time hits, long eta size in barrel, etc.).
+    \item {BadPFMuonFilter} -- Reject cosmic ray muons if a muon passes the PF muon quality cuts but is still too low quality and has large $p_T$.
 \end{itemize}
